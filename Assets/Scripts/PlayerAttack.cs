@@ -63,7 +63,7 @@ public class PlayerAttack : MonoBehaviour
         Vector3 attackPosition = transform.position + direction * attackDistance;
         attackPosition.z = -1f; // ensure it's rendered above sprites
 
-        // Apply rotation and position
+        // Apply rotation and position to attackArea
         attackArea.transform.position = attackPosition;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         attackArea.transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
@@ -72,8 +72,15 @@ public class PlayerAttack : MonoBehaviour
 
         if (slashEffectPrefab != null)
         {
-            Quaternion rotation = Quaternion.Euler(0f, 0f, angle - 90f);
+            // Get original prefab rotation in Euler angles
+            Vector3 originalEuler = slashEffectPrefab.transform.rotation.eulerAngles;
+
+            // Construct new rotation: 
+            // x rotation based on cursor angle, y and z from prefab
+            Quaternion rotation = Quaternion.Euler(angle - 180f, originalEuler.y, originalEuler.z);
+
             currentSlashEffect = Instantiate(slashEffectPrefab, attackPosition, rotation);
         }
     }
+
 }
