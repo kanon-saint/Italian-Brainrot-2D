@@ -5,9 +5,9 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] GameObject objectToDuplicate; // Tile prefab
     [SerializeField] GameObject treePrefab; // Tree prefab
-    public int tileSize = 5;
-    public int viewRadius = 1;
-    public int maxTreesPerTile = 5;
+    public int tileSize = 9;
+    public int viewRadius = 4;
+    public int maxTreesPerTile = 1;
 
     // Store tile and its associated trees
     private Dictionary<Vector2Int, TileData> spawnedTiles = new Dictionary<Vector2Int, TileData>();
