@@ -23,10 +23,5 @@ public class EnemyBehavior : MonoBehaviour
         Vector3 move = direction * moveSpeed * Time.deltaTime;
 
         transform.position += move;
-
-        if (move != Vector3.zero)
-        {
-            transform.forward = direction;
-        }
     }
 }
