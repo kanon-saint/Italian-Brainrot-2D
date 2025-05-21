@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Panels")]
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject settingsPanel;
 
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Quit Game");
-        Application.Quit(); // Works only for built build
+        Application.Quit();
     }
+
 }
