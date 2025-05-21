@@ -6,6 +6,7 @@ public class CharacterGridManager : MonoBehaviour
     [SerializeField] private GameObject characterButtonPrefab;
     [SerializeField] private Transform gridParent;
     [SerializeField] private CharacterInfoPanel infoPanel; // Reference this in Inspector
+    [SerializeField] private CharacterSelectionManager selectionManager;
 
     void Start()
     {
@@ -18,7 +19,7 @@ public class CharacterGridManager : MonoBehaviour
         {
             GameObject btnGO = Instantiate(characterButtonPrefab, gridParent);
             CharacterButton btnScript = btnGO.GetComponent<CharacterButton>();
-            btnScript.Initialize(character, infoPanel);
+            btnScript.Initialize(character, infoPanel, selectionManager);
         }
     }
 }

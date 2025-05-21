@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e1901b0b60f8c40a8756a40dac9d9e, type: 3}
+  m_Name: TungTungTungSahur
+  m_EditorClassIdentifier: 
+  characterName: Tung Tung Tung Sahur
+  attackName: Swing of Death
+  attackDescription: Swing of Death
+  characterDescription: A hybrid humanoid
+  maxHP: 100
+  speed: 65
+  attackPower: 70
+  characterPrefab: {fileID: 1564368661593921090, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
+  characterImage: {fileID: -7652458606134618994, guid: 45e54de1841dcf341a217ce3b558c589, type: 3}
+  characterPng: {fileID: -4946436189862115443, guid: b8da75c2cffed43498e6752c6eff70c9, type: 3}
