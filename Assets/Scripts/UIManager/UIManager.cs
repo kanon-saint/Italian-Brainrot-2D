@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class UIManager : MonoBehaviour
     {
         menuPanel.SetActive(false);
         settingsPanel.SetActive(true);
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("CharacterSelection"); // Use the exact scene name
     }
 
     public void QuitGame()
