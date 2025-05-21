@@ -24,9 +24,9 @@ public class EnemyBehavior : MonoBehaviour
 
         transform.position += move;
 
-        if (move != Vector3.zero)
-        {
-            transform.forward = direction;
-        }
+        // if (move != Vector3.zero)
+        // {
+        //     transform.forward = direction;
+        // }
     }
 }
