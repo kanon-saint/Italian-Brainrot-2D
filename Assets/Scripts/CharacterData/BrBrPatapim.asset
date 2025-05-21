@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e1901b0b60f8c40a8756a40dac9d9e, type: 3}
+  m_Name: BrBrPatapim
+  m_EditorClassIdentifier: 
+  characterName: Br Br Patapim
+  attackName: Root Stomp
+  attackDescription: A melee attack, stomping enemies by its roots legs
+  characterDescription: He's a hybrid tree.
+  maxHP: 120
+  speed: 10
+  attackPower: 50
+  characterPrefab: {fileID: 7039423268491201131, guid: 0a4188822da316844916e7f97c796eed, type: 3}
+  characterImage: {fileID: 4145336725180928263, guid: 31af3760e976ca344ada66a58ea2c28a, type: 3}
+  characterPng: {fileID: -3794510061613224942, guid: baf27e947865b8e4aa6f8fbfbe3b5c16, type: 3}

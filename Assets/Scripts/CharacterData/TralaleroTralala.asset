@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e1901b0b60f8c40a8756a40dac9d9e, type: 3}
+  m_Name: TralaleroTralala
+  m_EditorClassIdentifier: 
+  characterName: Tralalero Tralala
+  attackName: Shark Bite
+  attackDescription: A powerful shark bite that crushes anything.
+  characterDescription: A hybrid shark that wears Nike shoes.
+  maxHP: 90
+  speed: 7
+  attackPower: 75
+  characterPrefab: {fileID: 4482984502225443580, guid: 1d7c665cf3101bd4aaa5daf2acc7129a, type: 3}
+  characterImage: {fileID: 5322218863732700604, guid: 8ac4bc21d118f3144bd5136bd06088e4, type: 3}
+  characterPng: {fileID: 1829274048609276647, guid: 0fcd997237e43df4aa3a09551f4cce4b, type: 3}
