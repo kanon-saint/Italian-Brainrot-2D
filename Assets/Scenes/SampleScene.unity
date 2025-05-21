@@ -2518,71 +2518,6 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_SortAtRoot: 0
---- !u!1 &1139927992
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1139927994}
-  - component: {fileID: 1139927993}
-  - component: {fileID: 1139927995}
-  m_Layer: 0
-  m_Name: MapTreeManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1139927993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139927992}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 973483ec2d8365948845dbd20af2e7ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTilePrefab: {fileID: 10872133}
-  treePrefab: {fileID: 651302071}
-  gridSizeX: 3
-  gridSizeY: 3
-  treesPerTile: 1
---- !u!4 &1139927994
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139927992}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1139927995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139927992}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1877170bed62194b991c2026f8c89ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToDuplicate: {fileID: 0}
-  spawnThreshold: 1
-  tileSize: 10
 --- !u!1001 &1238752588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2672,6 +2607,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4482984502225443580, guid: 1d7c665cf3101bd4aaa5daf2acc7129a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1748058169}
+    - targetCorrespondingSourceObject: {fileID: 4482984502225443580, guid: 1d7c665cf3101bd4aaa5daf2acc7129a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1748058174}
     - targetCorrespondingSourceObject: {fileID: 4482984502225443580, guid: 1d7c665cf3101bd4aaa5daf2acc7129a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1748058168}
@@ -2860,8 +2798,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDuplicate: {fileID: 615306249}
-  spawnThreshold: 3
+  treePrefab: {fileID: 651302071}
   tileSize: 10
+  viewRadius: 4
+  maxTreesPerTile: 1
+--- !u!114 &1748058174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748058164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced7203942780ac499cef0fa70083d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slashEffectPrefab: {fileID: 5503505460791601945, guid: 74c549d1b06b6b140a1fd9536eea637f, type: 3}
+  attackDistance: 0.5
+  attackDuration: 0.25
+  attackCooldown: 1
 --- !u!1001 &1769889902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3033,4 +2989,4 @@ SceneRoots:
   - {fileID: 1769889902}
   - {fileID: 58606552}
   - {fileID: 30401281}
-  - {fileID: 1139927994}
+  - {fileID: 1406049986}
