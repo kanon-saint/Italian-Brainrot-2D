@@ -9795,6 +9795,7 @@ GameObject:
   - component: {fileID: 1173243701402730150}
   - component: {fileID: 7364936370289906279}
   - component: {fileID: 4752034024110402706}
+  - component: {fileID: 3220996569848331994}
   m_Layer: 0
   m_Name: Basic Slash Blue
   m_TagString: Untagged
@@ -14676,6 +14677,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!210 &3220996569848331994
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503505460791601945}
+  m_Enabled: 1
+  m_SortingLayerID: -1580255069
+  m_SortingLayer: 3
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &8373613166400002822
 GameObject:
   m_ObjectHideFlags: 0

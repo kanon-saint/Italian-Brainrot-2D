@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] private Animator animator;
 
     private Transform player;
 
@@ -23,5 +24,15 @@ public class EnemyBehavior : MonoBehaviour
         Vector3 move = direction * moveSpeed * Time.deltaTime;
 
         transform.position += move;
+        animator.SetFloat("Speed", move.magnitude / Time.deltaTime);
+
+        if (player.position.x < transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0); // Face left
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0); // Face right
+        }
     }
 }

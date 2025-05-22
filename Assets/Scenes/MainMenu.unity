@@ -1287,10 +1287,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6846374550396110277, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846374550396110277, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
       propertyPath: m_SortingOrder
       value: 99
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6846374550396110277, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7789113374913394607, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
+    - {fileID: 8878920010522214475, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
+    - {fileID: 6739926329289644487, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
+    - {fileID: 2262657942157584619, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
+    - {fileID: 9093648106898666875, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
+    - {fileID: 55833670965363946, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4138,8 +4152,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 762298040}
     m_Modifications:
     - target: {fileID: 5164227041384699246, guid: 0a4188822da316844916e7f97c796eed, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164227041384699246, guid: 0a4188822da316844916e7f97c796eed, type: 3}
       propertyPath: m_SortingOrder
       value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164227041384699246, guid: 0a4188822da316844916e7f97c796eed, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7039423268491201131, guid: 0a4188822da316844916e7f97c796eed, type: 3}
       propertyPath: m_Name
@@ -4201,7 +4223,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7087722073045304203, guid: 0a4188822da316844916e7f97c796eed, type: 3}
+    - {fileID: 7135268615194203440, guid: 0a4188822da316844916e7f97c796eed, type: 3}
+    - {fileID: 7426568854808123410, guid: 0a4188822da316844916e7f97c796eed, type: 3}
+    - {fileID: 3324523105056139751, guid: 0a4188822da316844916e7f97c796eed, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

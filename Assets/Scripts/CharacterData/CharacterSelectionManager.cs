@@ -23,12 +23,7 @@ public class CharacterSelectionManager : MonoBehaviour
     public void SelectCharacter(CharacterData character)
     {
         GameManager.Instance.selectedCharacter = character;
-        StartCoroutine(LoadSceneWithDelay());
+        SceneManager.LoadScene("BoundaryScene");
     }
 
-    private IEnumerator LoadSceneWithDelay()
-    {
-        yield return new WaitForSeconds(1f); // Optional delay
-        SceneManager.LoadScene("SampleScene");
-    }
 }
