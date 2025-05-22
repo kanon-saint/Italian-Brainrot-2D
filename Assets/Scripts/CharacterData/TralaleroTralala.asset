@@ -19,6 +19,6 @@ MonoBehaviour:
   maxHP: 90
   speed: 7
   attackPower: 75
-  characterPrefab: {fileID: 4482984502225443580, guid: 1d7c665cf3101bd4aaa5daf2acc7129a, type: 3}
+  characterPrefab: {fileID: 842166789423210765, guid: 0e3f69b42bcf1e14e9a2773701789193, type: 3}
   characterImage: {fileID: 5322218863732700604, guid: 8ac4bc21d118f3144bd5136bd06088e4, type: 3}
   characterPng: {fileID: 1829274048609276647, guid: 0fcd997237e43df4aa3a09551f4cce4b, type: 3}
