@@ -17,13 +17,12 @@ public class CharacterSelectionManager : MonoBehaviour
             return;
         }
         Instance = this;
-        // DontDestroyOnLoad(gameObject); // Optional: persist across scenes
+        DontDestroyOnLoad(gameObject);
     }
 
     public void SelectCharacter(CharacterData character)
     {
-        SelectedCharacter = character;
-        Debug.Log("Selected character: " + character.characterName);
+        GameManager.Instance.selectedCharacter = character;
         StartCoroutine(LoadSceneWithDelay());
     }
 
