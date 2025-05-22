@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Tree
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -42,17 +43,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer 1
+  - name: Ground
     uniqueID: 3407081851
     locked: 0
-  - name: New Layer 2
+  - name: Walls
     uniqueID: 194639913
     locked: 0
-  - name: New Layer 3
+  - name: Objects
     uniqueID: 2714712227
     locked: 0
-  - name: New Layer 4
+  - name: Characters
     uniqueID: 3365011989
+    locked: 0
+  - name: WallsBottom
+    uniqueID: 3309950761
     locked: 0
   m_RenderingLayers:
   - Default

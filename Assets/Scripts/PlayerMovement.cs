@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
 
     private Vector2 movement;
@@ -16,11 +15,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Movement input
+        // Get input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        // Update animator with movement speed
+        // Normalize diagonal movement
+        if (movement.sqrMagnitude > 1)
+            movement.Normalize();
+
+        // Apply movement using Transform
+        transform.position += (Vector3)movement * moveSpeed * Time.deltaTime;
+
+        // Animator
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
         // Flip toward mouse cursor
@@ -33,11 +39,5 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
         }
-    }
-
-    void FixedUpdate()
-    {
-        // Apply movement
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
