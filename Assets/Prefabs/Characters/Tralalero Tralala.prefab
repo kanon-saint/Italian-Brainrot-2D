@@ -40,6 +40,7 @@ Transform:
   - {fileID: 1057152600099689193}
   - {fileID: 58652993415980029}
   - {fileID: 7358822708993482980}
+  - {fileID: 6011134032674595753}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!210 &4435147039995542473
@@ -297,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6358114436642768133
 Transform:
   m_ObjectHideFlags: 0
@@ -650,3 +651,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &6472039169288622993
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3883087432560057237}
+    m_Modifications:
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321375746978530054, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: m_Name
+      value: Armi Black png_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388626365667670198, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 3883087432560057237}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+--- !u!4 &6011134032674595753 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 773101639724199992, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
+  m_PrefabInstance: {fileID: 6472039169288622993}
+  m_PrefabAsset: {fileID: 0}
