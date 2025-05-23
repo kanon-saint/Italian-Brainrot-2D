@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private GameObject slashEffectPrefab;
+    [SerializeField] private GameObject defaultAttackPfx;
     [SerializeField] private float attackDistance = 0.5f;
     [SerializeField] private float attackDuration = 0.25f;
     [SerializeField] private float attackCooldown = 1f;
 
     private GameObject attackArea;
-    private GameObject currentSlashEffect;
+    private GameObject currentAttackPfx;
 
     private bool attacking = false;
     private float attackTimer = 0f;
@@ -38,9 +38,9 @@ public class PlayerAttack : MonoBehaviour
             {
                 attackArea.SetActive(false);
 
-                if (currentSlashEffect != null)
+                if (currentAttackPfx != null)
                 {
-                    Destroy(currentSlashEffect);
+                    Destroy(currentAttackPfx);
                 }
 
                 attacking = false;
@@ -67,13 +67,13 @@ public class PlayerAttack : MonoBehaviour
         attackArea.SetActive(true);
 
         // If slash effect prefab is set, instantiate it at attackArea's position with correct rotation
-        if (slashEffectPrefab != null)
+        if (defaultAttackPfx != null)
         {
-            Vector3 originalEuler = slashEffectPrefab.transform.rotation.eulerAngles;
+            Vector3 originalEuler = defaultAttackPfx.transform.rotation.eulerAngles;
             Quaternion rotation = Quaternion.Euler(angle - 180f, originalEuler.y, originalEuler.z);
 
             // Use attackArea's current position instead of recalculated position
-            currentSlashEffect = Instantiate(slashEffectPrefab, attackArea.transform.position, rotation);
+            currentAttackPfx = Instantiate(defaultAttackPfx, attackArea.transform.position, rotation);
         }
     }
 
