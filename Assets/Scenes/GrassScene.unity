@@ -2716,14 +2716,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4878618338176504006, guid: 0e3f69b42bcf1e14e9a2773701789193, type: 3}
-      propertyPath: treePrefab
-      value: 
-      objectReference: {fileID: 651302071}
-    - target: {fileID: 4878618338176504006, guid: 0e3f69b42bcf1e14e9a2773701789193, type: 3}
-      propertyPath: objectToDuplicate
-      value: 
-      objectReference: {fileID: 615306249}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
