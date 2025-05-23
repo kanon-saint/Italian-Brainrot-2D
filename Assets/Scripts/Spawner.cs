@@ -9,8 +9,8 @@ public class Spawner : MonoBehaviour
     public int viewRadius = 4;
     public int maxTreesPerTile = 1;
 
-    // Store tile and its associated trees
     private Dictionary<Vector2Int, TileData> spawnedTiles = new Dictionary<Vector2Int, TileData>();
+    private Dictionary<Vector2Int, List<Vector3>> savedTreePositions = new Dictionary<Vector2Int, List<Vector3>>();
     private Vector2Int currentTileCoord;
 
     void Start()
@@ -50,25 +50,47 @@ public class Spawner : MonoBehaviour
             for (int y = -viewRadius; y <= viewRadius; y++)
             {
                 Vector2Int tileCoord = new Vector2Int(centerTile.x + x, centerTile.y + y);
+
                 if (!spawnedTiles.ContainsKey(tileCoord))
                 {
-                    Vector3 spawnPosition = new Vector3(tileCoord.x * tileSize, tileCoord.y * tileSize, 0);
-                    GameObject tile = Instantiate(objectToDuplicate, spawnPosition, Quaternion.identity);
+                    Vector3 tilePosition = new Vector3(tileCoord.x * tileSize, tileCoord.y * tileSize, 0);
+                    GameObject tile = Instantiate(objectToDuplicate, tilePosition, Quaternion.identity);
 
                     List<GameObject> treeList = new List<GameObject>();
-                    for (int i = 0; i < Random.Range(1, maxTreesPerTile + 1); i++)
+
+                    if (!savedTreePositions.ContainsKey(tileCoord))
                     {
-                        Vector3 randomOffset = new Vector3(
-                            Random.Range(0.5f, tileSize - 0.5f),
-                            Random.Range(0.5f, tileSize - 0.5f),
-                            0
-                        );
-                        Vector3 treePosition = spawnPosition + randomOffset;
-                        GameObject tree = Instantiate(treePrefab, treePosition, Quaternion.identity);
-                        treeList.Add(tree);
+                        int treeCount = Random.Range(1, maxTreesPerTile + 1);
+                        List<Vector3> positions = new List<Vector3>();
+
+                        for (int i = 0; i < treeCount; i++)
+                        {
+                            Vector3 offset = new Vector3(
+                                Random.Range(0.5f, tileSize - 0.5f),
+                                Random.Range(0.5f, tileSize - 0.5f),
+                                0
+                            );
+
+                            Vector3 treePos = tilePosition + offset;
+                            positions.Add(treePos);
+
+                            GameObject tree = Instantiate(treePrefab, treePos, Quaternion.identity);
+                            treeList.Add(tree);
+                        }
+
+                        savedTreePositions[tileCoord] = positions;
+                    }
+                    else
+                    {
+                        // Reuse saved tree positions
+                        foreach (Vector3 pos in savedTreePositions[tileCoord])
+                        {
+                            GameObject tree = Instantiate(treePrefab, pos, Quaternion.identity);
+                            treeList.Add(tree);
+                        }
                     }
 
-                    spawnedTiles.Add(tileCoord, new TileData(tile, treeList));
+                    spawnedTiles[tileCoord] = new TileData(tile, treeList);
                 }
             }
         }
@@ -101,7 +123,6 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    // Helper class to group tile and trees
     class TileData
     {
         public GameObject tileObject;
