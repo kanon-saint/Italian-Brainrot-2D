@@ -10,6 +10,8 @@ public class CharacterHUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI hpText;
     [SerializeField] private Slider expSlider;
     [SerializeField] private TextMeshProUGUI levelText;
+    [SerializeField] private TextMeshProUGUI timerText;
+
 
     [Header("Leveling Configuration")]
     [SerializeField] private int startingExpToLevelUp = 100;
@@ -20,6 +22,8 @@ public class CharacterHUD : MonoBehaviour
     private int currentExp;
     private int expToNextLevel;
     private float maxHP;
+    private float timer = 0f;
+
 
     private void Awake()
     {
@@ -35,6 +39,16 @@ public class CharacterHUD : MonoBehaviour
     private void Start()
     {
         ResetExperience();
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        int minutes = Mathf.FloorToInt(timer / 60f);
+        int seconds = Mathf.FloorToInt(timer % 60f);
+
+        if (timerText != null)
+            timerText.text = $"{minutes:00}:{seconds:00}";
     }
 
     /// <summary>
