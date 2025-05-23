@@ -2203,6 +2203,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2341,6 +2342,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothSpeed: 0.125
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1877170bed62194b991c2026f8c89ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDuplicate: {fileID: 615306249}
+  treePrefab: {fileID: 651302071}
+  tileSize: 9
+  viewRadius: 4
+  maxTreesPerTile: 1
 --- !u!1 &615306249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,7 +2580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 1564368661593921090, guid: ead9fc3216a8fa2428f1f0fae8ec6e51, type: 3}
+  - {fileID: 7586402160338637091, guid: 8ec12158451d6794d96ffa5d584825ab, type: 3}
   spawnPoint: {fileID: 1406049986}
   spawnIntervalRange: {x: 2, y: 4}
 --- !u!1 &1522998523 stripped
