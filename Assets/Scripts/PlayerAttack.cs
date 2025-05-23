@@ -59,28 +59,23 @@ public class PlayerAttack : MonoBehaviour
 
         Vector3 direction = (mousePos - transform.position).normalized;
 
-        // Position the attack area at a fixed distance in that direction
-        Vector3 attackPosition = transform.position + direction * attackDistance;
-        attackPosition.z = -1f; // ensure it's rendered above sprites
-
-        // Apply rotation and position to attackArea
-        attackArea.transform.position = attackPosition;
+        // Calculate rotation angle
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        attackArea.transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
 
+        // Rotate the attack area to face the mouse
+        attackArea.transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
         attackArea.SetActive(true);
 
+        // If slash effect prefab is set, instantiate it at attackArea's position with correct rotation
         if (slashEffectPrefab != null)
         {
-            // Get original prefab rotation in Euler angles
             Vector3 originalEuler = slashEffectPrefab.transform.rotation.eulerAngles;
-
-            // Construct new rotation: 
-            // x rotation based on cursor angle, y and z from prefab
             Quaternion rotation = Quaternion.Euler(angle - 180f, originalEuler.y, originalEuler.z);
 
-            currentSlashEffect = Instantiate(slashEffectPrefab, attackPosition, rotation);
+            // Use attackArea's current position instead of recalculated position
+            currentSlashEffect = Instantiate(slashEffectPrefab, attackArea.transform.position, rotation);
         }
     }
+
 
 }
