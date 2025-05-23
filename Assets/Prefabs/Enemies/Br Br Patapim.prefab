@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 3683309177534960561}
   - component: {fileID: 7552949036336775851}
   - component: {fileID: -147134433144161460}
+  - component: {fileID: -1201501822346148187}
   m_Layer: 0
   m_Name: Br Br Patapim
   m_TagString: Enemy
@@ -362,6 +363,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &-1201501822346148187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3857542695622619987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c192bbcbcbf65ad48a94c43e3fcea1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expDrops:
+  - {fileID: 11400000, guid: d2dbd9ffe64fe604da2e8d0f004e6664, type: 2}
+  - {fileID: 11400000, guid: 9369d87d1e406414ab0cfe63e3ccf053, type: 2}
+  - {fileID: 11400000, guid: a9125b3ce6860fb49b9b279430e5306f, type: 2}
+  - {fileID: 11400000, guid: 6b13301bc28bb7f4aad05d6acb620c55, type: 2}
+  - {fileID: 11400000, guid: d0e1de5231e70c744930e0b8cb13b2a4, type: 2}
+  - {fileID: 11400000, guid: 6fac243aee4e9ff4894dea49e176706f, type: 2}
+  numberOfDrops: 1
 --- !u!1 &5321089125000576774
 GameObject:
   m_ObjectHideFlags: 0

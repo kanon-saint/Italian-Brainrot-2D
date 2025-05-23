@@ -4,15 +4,17 @@ public class CharacterAttributes : MonoBehaviour
 {
     [SerializeField] public int health = 10;
 
-    void Start()
-    {
-
-    }
+    private bool isDead = false; // Prevent multiple calls
 
     void Update()
     {
-        if (health <= 0)
+        if (!isDead && health <= 0)
         {
+            isDead = true;
+
+            // Call drop BEFORE destroying the object
+            GetComponent<EnemyDrops>()?.DropExp();
+
             Destroy(gameObject);
         }
     }
