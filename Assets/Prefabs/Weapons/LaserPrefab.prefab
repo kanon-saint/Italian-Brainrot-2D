@@ -171,3 +171,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserDamage: 0
+  laserDuration: 2
+  laserCoolDown: 3
