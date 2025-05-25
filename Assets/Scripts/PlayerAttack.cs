@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private GameObject defaultAttackPfx;
-    [SerializeField] private float attackDistance = 0.5f;
+    // [SerializeField] private float attackDistance = 0.5f;
     [SerializeField] private float attackDuration = 0.25f;
     [SerializeField] private float attackCooldown = 1f;
 
