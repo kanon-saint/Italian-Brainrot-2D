@@ -23,7 +23,7 @@ public class CharacterSelectionManager : MonoBehaviour
     public void SelectCharacter(CharacterData character)
     {
         GameManager.Instance.selectedCharacter = character;
-        SceneManager.LoadScene("BoundaryScene");
+        SceneManager.LoadScene("GraveyardStage");
     }
 
 }
