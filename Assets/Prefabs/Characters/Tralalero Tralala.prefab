@@ -164,7 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultAttackPfx: {fileID: 1400255665468144947, guid: 6c21e7a6e514dd9499418cbbb66211cf, type: 3}
-  attackDistance: 0.5
   attackDuration: 0.25
   attackCooldown: 1
 --- !u!114 &7029356319662427304
@@ -657,7 +656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1823637624143863971}
-  - component: {fileID: 1271880638702266797}
+  - component: {fileID: 8269043457707710379}
   m_Layer: 0
   m_Name: FireballSpawner
   m_TagString: Untagged
@@ -680,7 +679,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3883087432560057237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1271880638702266797
+--- !u!114 &8269043457707710379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -689,13 +688,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8157793856164728287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26962700ace4c7245970b2c1f8fa6d05, type: 3}
+  m_Script: {fileID: 11500000, guid: 75b3d3145ecd4994f82c400c07e97177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireballPrefab: {fileID: 1171729566265750509, guid: f6fb17b0d8ec3e346a13093e1f24d40c, type: 3}
-  character: {fileID: 3883087432560057237}
-  spawnInterval: 2
-  spreadAngle: 10
+  bulletPrefab: {fileID: 1171729566265750509, guid: f6fb17b0d8ec3e346a13093e1f24d40c, type: 3}
+  bulletSpeed: 30
+  bulletInterval: 0.1
+  attackCooldown: 3
+  bulletMaxDistance: 15
 --- !u!1001 &6472039169288622993
 PrefabInstance:
   m_ObjectHideFlags: 0
