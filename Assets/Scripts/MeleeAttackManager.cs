@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class MeleeAttackManager : MonoBehaviour
 {
     [SerializeField] private GameObject defaultAttackPfx;
-    // [SerializeField] private float attackDistance = 0.5f;
     [SerializeField] private float attackDuration = 0.25f;
     [SerializeField] private float attackCooldown = 1f;
 
@@ -26,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (attackTimer >= attackCooldown)
         {
-            Attack();
+            MeleeAttack();
             attackTimer = 0f;
         }
 
@@ -49,7 +48,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    private void Attack()
+    private void MeleeAttack()
     {
         attacking = true;
 
@@ -76,6 +75,4 @@ public class PlayerAttack : MonoBehaviour
             currentAttackPfx = Instantiate(defaultAttackPfx, attackArea.transform.position, rotation);
         }
     }
-
-
 }
