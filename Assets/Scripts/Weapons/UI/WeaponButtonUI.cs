@@ -55,7 +55,19 @@ public class WeaponButtonUI : MonoBehaviour
     // WeaponButtonUI.cs
     public void OnSelect()
     {
-        Debug.Log($"Button clicked for weapon: {weaponData.weaponName}");
+        if (weaponData != null)
+        {
+            if (weaponData.level < 4)
+            {
+                weaponData.level += 1;
+                Debug.Log($"Weapon '{weaponData.weaponName}' level increased to {weaponData.level}");
+            }
+            else
+            {
+                Debug.Log($"Weapon '{weaponData.weaponName}' is already at max level (4).");
+            }
+        }
+
         if (weaponManager != null && weaponData != null)
         {
             weaponManager.EquipWeapon(weaponData);
@@ -65,5 +77,6 @@ public class WeaponButtonUI : MonoBehaviour
             Debug.LogWarning("WeaponManager or WeaponData is null on button select.");
         }
     }
+
 
 }

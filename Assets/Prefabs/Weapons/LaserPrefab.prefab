@@ -170,7 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e940f0f20c9d945920551209ab351b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserDamage: 10
-  laserDuration: 0.5
-  laserCoolDown: 3
+  weaponData: {fileID: 11400000, guid: 766f107feece7ae48b09a3232d0f385a, type: 2}
+  baseLaserDamage: 5
+  baseLaserDuration: 0.25
+  baseLaserCooldown: 3
   positionOffset: {x: 4, y: 0, z: 0}

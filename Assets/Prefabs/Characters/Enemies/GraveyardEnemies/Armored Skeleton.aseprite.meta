@@ -945,11 +945,6 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    uuid:
-      value0: 1415759203
-      value1: 0
-      value2: 0
-      value3: 0
     guid: 1415759203
     name: Armored Skeleton
     layerFlags: 0

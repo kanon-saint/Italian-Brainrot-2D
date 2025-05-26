@@ -8,4 +8,5 @@ public class WeaponData : ScriptableObject
     public GameObject prefab;
     [TextArea]
     public string description;
+    public int level;
 }
