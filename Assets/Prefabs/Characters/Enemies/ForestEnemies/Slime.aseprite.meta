@@ -924,11 +924,6 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    uuid:
-      value0: 2939311854
-      value1: 0
-      value2: 0
-      value3: 0
     guid: -1355655442
     name: Slime
     layerFlags: 0

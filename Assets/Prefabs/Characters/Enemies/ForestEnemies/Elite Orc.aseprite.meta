@@ -1155,11 +1155,6 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    uuid:
-      value0: 3821710251
-      value1: 0
-      value2: 0
-      value3: 0
     guid: -473257045
     name: Elite Orc
     layerFlags: 0

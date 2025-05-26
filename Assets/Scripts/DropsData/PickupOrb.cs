@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class ExpOrb : MonoBehaviour
+public class PickupOrb : MonoBehaviour
 {
-    public ExpDropData data; // Assign in prefab
+    public ExpDropData expData;      // Assign if this is an EXP orb
+    public FoodDropData foodData;    // Assign if this is a food orb
+
     public float pickupRadius = 3f;
     public float moveSpeed = 5f;
 
@@ -20,7 +22,6 @@ public class ExpOrb : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        // Attracted manually or within pickup radius
         if (isAttracted || distance <= pickupRadius)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
@@ -34,10 +35,24 @@ public class ExpOrb : MonoBehaviour
 
     public virtual void Collect()
     {
-        if (data != null)
+        var character = GameManager.Instance?.selectedCharacter;
+
+        if (character != null)
         {
-            CharacterHUD.Instance?.AddExperience(data.expValue);
+            // Add experience
+            if (expData != null)
+            {
+                CharacterHUD.Instance?.AddExperience(expData.expValue);
+            }
+
+            // Heal using foodData's healValue
+            else if (foodData != null)
+            {
+                character.Heal(foodData.healValue);
+                CharacterHUD.Instance?.UpdateHP(character.currentHP);
+            }
         }
+
         Destroy(gameObject);
     }
 

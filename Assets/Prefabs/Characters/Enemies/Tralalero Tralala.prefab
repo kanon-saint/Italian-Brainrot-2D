@@ -209,7 +209,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6b13301bc28bb7f4aad05d6acb620c55, type: 2}
   - {fileID: 11400000, guid: d0e1de5231e70c744930e0b8cb13b2a4, type: 2}
   - {fileID: 11400000, guid: 6fac243aee4e9ff4894dea49e176706f, type: 2}
-  numberOfDrops: 1
+  numberOfExpDrops: 1
+  foodDrops:
+  - {fileID: 11400000, guid: 914a00a8b34f1344f864b5c1fabacbaf, type: 2}
+  - {fileID: 11400000, guid: 2f16334ee843acb43b9531ee467669b8, type: 2}
+  - {fileID: 11400000, guid: 05de413a592cc3344896e8d4807c52cf, type: 2}
+  - {fileID: 11400000, guid: 5862810d653e767409a4040de961d5a2, type: 2}
+  foodDropChance: 0.25
 --- !u!114 &1469180312965822731
 MonoBehaviour:
   m_ObjectHideFlags: 0

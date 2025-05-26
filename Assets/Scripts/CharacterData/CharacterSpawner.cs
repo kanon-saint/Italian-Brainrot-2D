@@ -10,6 +10,8 @@ public class CharacterSpawner : MonoBehaviour
         if (GameManager.Instance != null && GameManager.Instance.selectedCharacter != null)
         {
             CharacterData selectedData = GameManager.Instance.selectedCharacter;
+            GameManager.Instance.selectedCharacter.ResetHP();
+            GameManager.Instance.selectedCharacter.Heal(GameManager.Instance.selectedCharacter.maxHP);
 
             // Instantiate the character prefab
             GameObject characterInstance = Instantiate(selectedData.characterPrefab, spawnPoint.position, Quaternion.identity);
