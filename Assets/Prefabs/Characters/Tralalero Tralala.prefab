@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3114745904815321124}
   - component: {fileID: 989803963632143992}
   - component: {fileID: 1489260237714552682}
-  - component: {fileID: 6426464219460670715}
   - component: {fileID: 7029356319662427304}
   - component: {fileID: 209166487924678684}
+  - component: {fileID: 9145342572974311554}
   m_Layer: 0
   m_Name: Tralalero Tralala
   m_TagString: Player
@@ -149,21 +149,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.284193, y: 2.128467}
   m_EdgeRadius: 0
---- !u!114 &6426464219460670715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842166789423210765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced7203942780ac499cef0fa70083d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultAttackPfx: {fileID: 1400255665468144947, guid: 6c21e7a6e514dd9499418cbbb66211cf, type: 3}
-  attackDuration: 0.25
-  attackCooldown: 1
 --- !u!114 &7029356319662427304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +176,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingOffset: 100
+--- !u!114 &9145342572974311554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842166789423210765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfa15ceffc02ea4d830d1c4cb6721a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAttackPfx: {fileID: 1400255665468144947, guid: 6c21e7a6e514dd9499418cbbb66211cf, type: 3}
+  attackDuration: 0.25
+  attackCooldown: 1
 --- !u!1 &4106562171997451004
 GameObject:
   m_ObjectHideFlags: 0
