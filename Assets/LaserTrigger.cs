@@ -7,13 +7,19 @@ public class LaserTrigger : MonoBehaviour
     [SerializeField] private float laserDuration = 2f;
     [SerializeField] private float laserCoolDown = 3f;
 
+    // Use the offset similar to WeaponManager's previous logic but fixed
+    [SerializeField] private Vector3 positionOffset = new Vector3(-11f, 0f, 0f);
+
     private Collider2D laserCollider;
-    private SpriteRenderer laserRenderer; // Optional: to show/hide laser visually
+    private SpriteRenderer laserRenderer;
 
     private void Start()
     {
+        // Apply the offset once when the laser starts
+        transform.position += positionOffset;
+
         laserCollider = GetComponent<Collider2D>();
-        laserRenderer = GetComponent<SpriteRenderer>(); // if you want to toggle visibility
+        laserRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(LaserCycle());
     }
 
@@ -34,13 +40,11 @@ public class LaserTrigger : MonoBehaviour
     {
         while (true)
         {
-            // Activate laser
             laserCollider.enabled = true;
             if (laserRenderer != null) laserRenderer.enabled = true;
 
             yield return new WaitForSeconds(laserDuration);
 
-            // Deactivate laser
             laserCollider.enabled = false;
             if (laserRenderer != null) laserRenderer.enabled = false;
 

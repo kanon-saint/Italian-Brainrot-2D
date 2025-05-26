@@ -2,16 +2,24 @@ using UnityEngine;
 
 public class AxeOrbit : MonoBehaviour
 {
-    public Transform character;       // The object to orbit around
-    public float radius = 3f;       // Distance from the character
-    public float orbitSpeed = 180f;   // Degrees per second (orbit around character)
-    public float selfSpinSpeed = 360f; // Degrees per second (self-rotation)
+    public float radius = 3f;           // Distance from the character
+    public float orbitSpeed = 180f;     // Degrees per second (orbit around character)
+    public float selfSpinSpeed = 360f;  // Degrees per second (self-rotation)
 
+    private Transform character;
     private float angle;
 
     void Update()
     {
-        if (character == null) return;
+        // Find the player if we don't have a reference yet
+        if (character == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                character = playerObj.transform;
+            else
+                return;  // No player found, skip this frame
+        }
 
         // Update orbit angle
         angle += orbitSpeed * Time.deltaTime;

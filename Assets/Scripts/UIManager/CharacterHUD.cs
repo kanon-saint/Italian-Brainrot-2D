@@ -11,6 +11,9 @@ public class CharacterHUD : MonoBehaviour
     [SerializeField] private Slider expSlider;
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private WeaponManager weaponManager; // Assign in Inspector
+    [SerializeField] private int expIncreasePerLevel = 100;
+
 
 
     [Header("Leveling Configuration")]
@@ -39,6 +42,7 @@ public class CharacterHUD : MonoBehaviour
     private void Start()
     {
         ResetExperience();
+        UpdateUI();
     }
 
     private void Update()
@@ -51,9 +55,6 @@ public class CharacterHUD : MonoBehaviour
             timerText.text = $"{minutes:00}:{seconds:00}";
     }
 
-    /// <summary>
-    /// Initializes the HUD with icon and HP values.
-    /// </summary>
     public void InitializeHUD(Sprite icon, float currentHP, float maxHPValue)
     {
         if (iconImage == null || hpSlider == null || hpText == null || expSlider == null || levelText == null)
@@ -72,35 +73,35 @@ public class CharacterHUD : MonoBehaviour
         UpdateUI();
     }
 
-    /// <summary>
-    /// Adds experience and handles level-up logic.
-    /// </summary>
     public void AddExperience(int amount)
     {
         currentExp += amount;
+
+        bool leveledUp = false;
 
         while (currentExp >= expToNextLevel)
         {
             currentExp -= expToNextLevel;
             currentLevel++;
-            expToNextLevel *= 2;
+            expToNextLevel += expIncreasePerLevel;
+
+            leveledUp = true;
         }
 
         UpdateUI();
+
+        if (leveledUp && weaponManager != null)
+        {
+            weaponManager.ShowWeaponChoices();
+        }
     }
 
-    /// <summary>
-    /// Updates the HP display.
-    /// </summary>
+
     public void UpdateHP(float currentHP)
     {
         hpSlider.value = currentHP;
         hpText.text = $"{(int)currentHP} / {(int)maxHP}";
     }
-
-    /// <summary>
-    /// Resets the experience and level to starting values.
-    /// </summary>
     public void ResetExperience()
     {
         currentLevel = 0;
@@ -109,17 +110,19 @@ public class CharacterHUD : MonoBehaviour
         UpdateUI();
     }
 
-    /// <summary>
-    /// Updates experience slider and level text.
-    /// </summary>
     private void UpdateUI()
     {
-        expSlider.maxValue = expToNextLevel;
-        expSlider.value = currentExp;
-        levelText.text = $"LV: {currentLevel:D2}";
+        if (expSlider != null)
+        {
+            expSlider.maxValue = expToNextLevel;
+            expSlider.value = currentExp;
+        }
+
+        if (levelText != null)
+            levelText.text = $"LV: {currentLevel:D2}";
     }
 
-    // Public getters (read-only)
+
     public int CurrentLevel => currentLevel;
     public int CurrentExp => currentExp;
     public int ExpToNextLevel => expToNextLevel;

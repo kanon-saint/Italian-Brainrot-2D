@@ -1,0 +1,101 @@
+using UnityEngine;
+using System.Collections.Generic;
+
+public class WeaponManager : MonoBehaviour
+{
+    [Header("Weapons")]
+    [SerializeField] private WeaponData[] allWeapons;
+
+    [Header("UI")]
+    [SerializeField] private GameObject powerUpPanel;
+    [SerializeField] private WeaponButtonUI[] weaponButtons;
+
+    private List<GameObject> attachedWeapons = new();
+
+    // Helper property to find player dynamically when needed
+    private GameObject Player
+    {
+        get
+        {
+            var playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj == null)
+                Debug.LogError("Player GameObject with tag 'Player' not found!");
+            return playerObj;
+        }
+    }
+
+    private void Start()
+    {
+        if (powerUpPanel != null)
+            powerUpPanel.SetActive(false);
+        else
+            Debug.LogError("PowerUpPanel not assigned in Inspector!");
+    }
+
+    public void ShowWeaponChoices()
+    {
+        if (powerUpPanel == null)
+        {
+            Debug.LogError("PowerUpPanel not assigned in Inspector!");
+            return;
+        }
+
+        Time.timeScale = 0f;
+        powerUpPanel.SetActive(true);
+
+        List<WeaponData> choices = GetRandomWeapons(3);
+
+        for (int i = 0; i < weaponButtons.Length; i++)
+        {
+            if (i < choices.Count)
+            {
+                weaponButtons[i].gameObject.SetActive(true);
+                weaponButtons[i].Setup(choices[i], this);
+            }
+            else
+            {
+                weaponButtons[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void EquipWeapon(WeaponData weaponData)
+    {
+        Debug.Log($"EquipWeapon called with: {weaponData?.weaponName}");
+
+        GameObject player = Player; // Get player dynamically here
+
+        if (weaponData == null || weaponData.prefab == null || player == null)
+        {
+            Debug.LogWarning("EquipWeapon failed: missing data or player");
+            return;
+        }
+
+        GameObject weapon = Instantiate(weaponData.prefab, player.transform);
+        weapon.transform.localPosition = Vector3.zero;  // Remove offset, attach at player's origin
+        attachedWeapons.Add(weapon);
+
+        Debug.Log($"Equipped weapon: {weaponData.weaponName}");
+
+        powerUpPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+
+    private List<WeaponData> GetRandomWeapons(int count)
+    {
+        List<WeaponData> pool = new(allWeapons);
+        List<WeaponData> result = new();
+
+        int actualCount = Mathf.Min(count, pool.Count);
+
+        for (int i = 0; i < actualCount; i++)
+        {
+            int index = Random.Range(0, pool.Count);
+            result.Add(pool[index]);
+            pool.RemoveAt(index);
+        }
+
+        return result;
+    }
+}
