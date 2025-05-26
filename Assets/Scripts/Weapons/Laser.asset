@@ -16,3 +16,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: a1ff8d71f6d1a4809b4e35fac8d4a7df, type: 3}
   prefab: {fileID: 6596955042354267923, guid: 59a25394ffe55894d8c23683f15e9062, type: 3}
   description: Shoots a laser horizontal to the brainrot.
+  level: 0
