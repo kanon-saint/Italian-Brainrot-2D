@@ -13,7 +13,7 @@ public class CharacterAttributes : MonoBehaviour
             isDead = true;
 
             // Call drop BEFORE destroying the object
-            GetComponent<EnemyDrops>()?.DropExp();
+            GetComponent<EnemyDrops>()?.DropItems();
 
             Destroy(gameObject);
         }

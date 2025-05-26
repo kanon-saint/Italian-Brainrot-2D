@@ -98,10 +98,10 @@ public class CharacterHUD : MonoBehaviour
     }
 
 
-    public void UpdateHP(int currentHP)
+    public void UpdateHP(float currentHP)
     {
         hpSlider.value = currentHP;
-        hpText.text = $"{currentHP} / {(int)maxHP}";
+        hpText.text = $"{(int)currentHP} / {(int)maxHP}";
     }
 
     public void ResetExperience()

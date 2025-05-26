@@ -247,7 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286d76e07a287d24fb8f7cb3b6d3a70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 6fac243aee4e9ff4894dea49e176706f, type: 2}
-  pickupRadius: 3
-  moveSpeed: 7
+  expData: {fileID: 11400000, guid: 6fac243aee4e9ff4894dea49e176706f, type: 2}
+  foodData: {fileID: 0}
+  pickupRadius: 2
+  moveSpeed: 10
   attractionRadius: 50

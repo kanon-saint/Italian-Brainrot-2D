@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpecialExpOrb : ExpOrb
+public class SpecialExpOrb : PickupOrb
 {
     public float attractionRadius = 10f;
 
@@ -10,7 +10,7 @@ public class SpecialExpOrb : ExpOrb
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attractionRadius);
         foreach (var hit in hits)
         {
-            if (hit.TryGetComponent(out ExpOrb orb) && orb != this)
+            if (hit.TryGetComponent(out PickupOrb orb) && orb != this)
             {
                 orb.AttractToPlayer();
             }

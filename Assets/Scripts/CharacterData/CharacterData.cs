@@ -15,9 +15,16 @@ public class CharacterData : ScriptableObject
     public GameObject characterPrefab;
     public Sprite characterImage;
     public Sprite characterPng;
-    
+
     public void ResetHP()
     {
         currentHP = maxHP;
+    }
+    
+    public void Heal(int amount)
+    {
+        currentHP += amount;
+        if (currentHP > maxHP)
+            currentHP = maxHP;
     }
 }

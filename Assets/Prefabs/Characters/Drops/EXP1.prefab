@@ -97,9 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63588e9043088a84080098ff564559ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: d2dbd9ffe64fe604da2e8d0f004e6664, type: 2}
-  pickupRadius: 3
-  moveSpeed: 7
+  expData: {fileID: 11400000, guid: d2dbd9ffe64fe604da2e8d0f004e6664, type: 2}
+  foodData: {fileID: 0}
+  pickupRadius: 2
+  moveSpeed: 10
 --- !u!50 &6752405081327971843
 Rigidbody2D:
   serializedVersion: 5
