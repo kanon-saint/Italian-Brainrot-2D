@@ -1050,11 +1050,6 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    uuid:
-      value0: 2885332791
-      value1: 0
-      value2: 0
-      value3: 0
     guid: -1409634505
     name: Werewolf
     layerFlags: 0

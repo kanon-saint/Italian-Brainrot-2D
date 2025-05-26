@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3378fef4c203fd54292d62f16b677c58, type: 3}
-  m_Name: Laser
+  m_Name: Deadly_Radius
   m_EditorClassIdentifier: 
-  weaponName: Laser
-  icon: {fileID: 21300000, guid: a1ff8d71f6d1a4809b4e35fac8d4a7df, type: 3}
-  prefab: {fileID: 6596955042354267923, guid: 59a25394ffe55894d8c23683f15e9062, type: 3}
-  description: Shoots a laser horizontal to the brainrot.
-  level: 0
+  weaponName: Death Zone
+  icon: {fileID: -642630493609389989, guid: 8e6aa71d2a5fb63459e15f4658605ed1, type: 3}
+  prefab: {fileID: 1707816925870976987, guid: 46ef0368ffd488146926993852e39f72, type: 3}
+  description: Unleash a deadly aura that continuously damages all enemies within
+    range.

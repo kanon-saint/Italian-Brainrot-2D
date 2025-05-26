@@ -1029,11 +1029,6 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    uuid:
-      value0: 3647055416
-      value1: 0
-      value2: 0
-      value3: 0
     guid: -647911880
     name: Soldier
     layerFlags: 0

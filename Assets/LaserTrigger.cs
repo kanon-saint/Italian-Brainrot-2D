@@ -3,24 +3,67 @@ using System.Collections;
 
 public class LaserTrigger : MonoBehaviour
 {
-    [SerializeField] private int laserDamage;
-    [SerializeField] private float laserDuration = 2f;
-    [SerializeField] private float laserCoolDown = 3f;
-
-    // Use the offset similar to WeaponManager's previous logic but fixed
-    [SerializeField] private Vector3 positionOffset = new Vector3(-11f, 0f, 0f);
+    [SerializeField] private WeaponData weaponData;
+    [SerializeField] private int baseLaserDamage;
+    [SerializeField] private float baseLaserDuration;
+    [SerializeField] private float baseLaserCooldown;
+    [SerializeField] private Vector3 positionOffset;
 
     private Collider2D laserCollider;
     private SpriteRenderer laserRenderer;
 
+    private int laserDamage;
+    private float laserDuration;
+    private float laserCooldown;
+
     private void Start()
     {
-        // Apply the offset once when the laser starts
         transform.position += positionOffset;
 
         laserCollider = GetComponent<Collider2D>();
         laserRenderer = GetComponent<SpriteRenderer>();
+
+        ApplyWeaponLevelBehavior();
         StartCoroutine(LaserCycle());
+    }
+
+    private void ApplyWeaponLevelBehavior()
+    {
+        if (weaponData == null)
+        {
+            Debug.LogWarning("WeaponData is not assigned to LaserTrigger.");
+            return;
+        }
+
+        int level = weaponData.level;
+
+        // You can fine-tune these values per level
+        switch (level)
+        {
+            default:
+                laserDamage = baseLaserDamage;
+                laserDuration = baseLaserDuration;
+                laserCooldown = baseLaserCooldown;
+                break;
+            case 2:
+                laserDamage = baseLaserDamage + 2;
+                laserDuration = baseLaserDuration + 0.5f;
+                laserCooldown = baseLaserCooldown - 0.5f;
+                break;
+            case 3:
+                laserDamage = baseLaserDamage + 3;
+                laserDuration = baseLaserDuration + 0.75f;
+                laserCooldown = baseLaserCooldown - 0.5f;
+                break;
+            case 4:
+                laserDamage = baseLaserDamage + 5;
+                laserDuration = baseLaserDuration + 1.5f;
+                laserCooldown = baseLaserCooldown - 0.5f;
+                break;
+        }
+
+        // Clamp cooldown to avoid going negative
+        laserCooldown = Mathf.Max(0.5f, laserCooldown);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,7 +74,7 @@ public class LaserTrigger : MonoBehaviour
             if (enemyAttributes != null)
             {
                 enemyAttributes.TakeDamage(laserDamage);
-                Debug.Log("Enemy hit! Remaining HP: " + enemyAttributes.health);
+                Debug.Log($"Enemy hit! Damage: {laserDamage}, Remaining HP: {enemyAttributes.health}");
             }
         }
     }
@@ -48,7 +91,7 @@ public class LaserTrigger : MonoBehaviour
             laserCollider.enabled = false;
             if (laserRenderer != null) laserRenderer.enabled = false;
 
-            yield return new WaitForSeconds(laserCoolDown);
+            yield return new WaitForSeconds(laserCooldown);
         }
     }
 }

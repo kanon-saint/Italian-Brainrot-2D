@@ -10,7 +10,8 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private GameObject powerUpPanel;
     [SerializeField] private WeaponButtonUI[] weaponButtons;
 
-    private List<GameObject> attachedWeapons = new();
+    private Dictionary<string, GameObject> attachedWeapons = new();
+
 
     // Helper property to find player dynamically when needed
     private GameObject Player
@@ -63,7 +64,7 @@ public class WeaponManager : MonoBehaviour
     {
         Debug.Log($"EquipWeapon called with: {weaponData?.weaponName}");
 
-        GameObject player = Player; // Get player dynamically here
+        GameObject player = Player;
 
         if (weaponData == null || weaponData.prefab == null || player == null)
         {
@@ -71,15 +72,29 @@ public class WeaponManager : MonoBehaviour
             return;
         }
 
-        GameObject weapon = Instantiate(weaponData.prefab, player.transform);
-        weapon.transform.localPosition = Vector3.zero;  // Remove offset, attach at player's origin
-        attachedWeapons.Add(weapon);
+        // Destroy old weapon instance if it exists
+        if (attachedWeapons.TryGetValue(weaponData.weaponName, out GameObject oldWeapon))
+        {
+            if (oldWeapon != null)
+                Destroy(oldWeapon);
+        }
 
-        Debug.Log($"Equipped weapon: {weaponData.weaponName}");
+        // Instantiate and attach new weapon
+        GameObject newWeapon = Instantiate(weaponData.prefab, player.transform);
+        newWeapon.transform.localPosition = Vector3.zero;
 
-        powerUpPanel.SetActive(false);
+        // Replace the old one in dictionary
+        attachedWeapons[weaponData.weaponName] = newWeapon;
+
+        Debug.Log($"Equipped weapon: {weaponData.weaponName} at level {weaponData.level}");
+
+        // Hide panel and resume game
+        if (powerUpPanel != null)
+            powerUpPanel.SetActive(false);
+
         Time.timeScale = 1f;
     }
+
 
 
     private List<WeaponData> GetRandomWeapons(int count)
