@@ -3,33 +3,81 @@ using System.Collections.Generic;
 
 public class AttackPerSecond : MonoBehaviour
 {
-    [SerializeField] public int damagePerSecond = 10;
-    [SerializeField] public float damageInterval = 1f; // Time between damage ticks in seconds
+    [SerializeField] private WeaponData weaponData;
+    [SerializeField] private int baseDamagePerSecond = 2;
+    [SerializeField] private float baseDamageInterval = 1f;
     
+    private int currentDamagePerSecond;
+    private float currentDamageInterval;
     private float _timer;
     private HashSet<Collider2D> _enemiesInRange = new HashSet<Collider2D>();
 
+    private void Start()
+    {
+        ApplyWeaponLevelBehavior();
+        _timer = currentDamageInterval;
+    }
+
+    private void ApplyWeaponLevelBehavior()
+    {
+        if (weaponData == null)
+        {
+            Debug.LogWarning("WeaponData is not assigned to AttackPerSecond.");
+            currentDamagePerSecond = baseDamagePerSecond;
+            currentDamageInterval = baseDamageInterval;
+            return;
+        }
+
+        int level = weaponData.level;
+
+        // More controlled damage scaling
+        switch (level)
+        {
+            default:
+                currentDamagePerSecond = baseDamagePerSecond;
+                break;
+            case 2:
+                currentDamagePerSecond = baseDamagePerSecond * 2; // 20
+                break;
+            case 3:
+                currentDamagePerSecond = baseDamagePerSecond * 3; // 30
+                break;
+            case 4:
+                currentDamagePerSecond = baseDamagePerSecond * 4; // 40
+                break;
+            case 5:
+                currentDamagePerSecond = baseDamagePerSecond * 5; // 50
+                break;
+            // Add more levels if needed
+        }
+
+        // Optional: Slightly improve attack speed with levels
+        currentDamageInterval = Mathf.Max(0.3f, baseDamageInterval * (1f - (level * 0.1f)));
+
+        Debug.Log($"AttackPerSecond updated - Level: {level}, Damage: {currentDamagePerSecond}, Interval: {currentDamageInterval}");
+    }
+
     private void Update()
     {
-        // Count down the timer
         _timer -= Time.deltaTime;
         
-        // When timer reaches zero, deal damage to all enemies in range
         if (_timer <= 0f)
         {
-            foreach (var enemyCollider in _enemiesInRange)
+            var enemiesCopy = new List<Collider2D>(_enemiesInRange);
+            
+            foreach (var enemyCollider in enemiesCopy)
             {
                 if (enemyCollider != null && enemyCollider.CompareTag("Enemy"))
                 {
                     CharacterAttributes enemyAttributes = enemyCollider.GetComponent<CharacterAttributes>();
                     if (enemyAttributes != null)
                     {
-                        enemyAttributes.TakeDamage(damagePerSecond);
-                        Debug.Log($"Enemy hit! Remaining HP: {enemyAttributes.health}");
+                        enemyAttributes.TakeDamage(currentDamagePerSecond);
+                        Debug.Log($"Enemy hit! Damage: {currentDamagePerSecond}, Remaining HP: {enemyAttributes.health}");
                     }
                 }
             }
-            _timer = damageInterval; // Reset the timer
+            _timer = currentDamageInterval;
         }
     }
 
