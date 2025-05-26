@@ -173,4 +173,4 @@ MonoBehaviour:
   laserDamage: 10
   laserDuration: 0.5
   laserCoolDown: 3
-  positionOffset: {x: 3, y: 0, z: 0}
+  positionOffset: {x: 4, y: 0, z: 0}
