@@ -46,18 +46,18 @@ public class LaserTrigger : MonoBehaviour
                 laserCooldown = baseLaserCooldown;
                 break;
             case 2:
-                laserDamage = baseLaserDamage + 2;
-                laserDuration = baseLaserDuration + 0.5f;
+                laserDamage = baseLaserDamage;
+                laserDuration = baseLaserDuration + 0.25f;
                 laserCooldown = baseLaserCooldown - 0.5f;
                 break;
             case 3:
-                laserDamage = baseLaserDamage + 3;
-                laserDuration = baseLaserDuration + 0.75f;
+                laserDamage = baseLaserDamage;
+                laserDuration = baseLaserDuration + 0.50f;
                 laserCooldown = baseLaserCooldown - 0.5f;
                 break;
             case 4:
                 laserDamage = baseLaserDamage + 5;
-                laserDuration = baseLaserDuration + 1.5f;
+                laserDuration = baseLaserDuration + 1f;
                 laserCooldown = baseLaserCooldown - 0.5f;
                 break;
         }

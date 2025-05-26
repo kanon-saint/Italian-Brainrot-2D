@@ -46,6 +46,7 @@ public class GameOverManager : MonoBehaviour
     public void Retry()
     {
         Time.timeScale = 1f;
+        ResetWeapons();
 
         if (GameManager.Instance?.selectedCharacter != null)
         {
@@ -58,6 +59,7 @@ public class GameOverManager : MonoBehaviour
     public void GoToCharacterSelection()
     {
         Time.timeScale = 1f;
+        ResetWeapons();
 
         if (GameManager.Instance?.selectedCharacter != null)
         {
@@ -70,6 +72,7 @@ public class GameOverManager : MonoBehaviour
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
+        ResetWeapons();
 
         if (GameManager.Instance?.selectedCharacter != null)
         {
@@ -78,4 +81,17 @@ public class GameOverManager : MonoBehaviour
 
         SceneManager.LoadScene("MainMenu");
     }
+
+    private void ResetWeapons()
+    {
+        if (WeaponManager.Instance != null)
+        {
+            WeaponManager.Instance.ResetAllWeaponLevels();
+        }
+        else
+        {
+            Debug.LogWarning("WeaponManager instance not found!");
+        }
+    }
+
 }

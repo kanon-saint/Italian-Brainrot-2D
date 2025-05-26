@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 public class WeaponManager : MonoBehaviour
 {
+    public static WeaponManager Instance { get; private set; }
+
     [Header("Weapons")]
     [SerializeField] private WeaponData[] allWeapons;
 
@@ -24,6 +26,17 @@ public class WeaponManager : MonoBehaviour
             return playerObj;
         }
     }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
 
     private void Start()
     {
@@ -113,4 +126,18 @@ public class WeaponManager : MonoBehaviour
 
         return result;
     }
+
+    public void ResetAllWeaponLevels()
+    {
+        foreach (var weapon in allWeapons)
+        {
+            if (weapon != null)
+            {
+                weapon.level = 0;
+            }
+        }
+
+        Debug.Log("All weapon levels have been reset to 0.");
+    }
+
 }
