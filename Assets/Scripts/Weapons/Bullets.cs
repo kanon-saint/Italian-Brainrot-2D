@@ -4,7 +4,7 @@ using System.Collections;
 public class Bullets : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private float bulletSpeed = 30f;
+    [SerializeField] private float bulletSpeed = 20f;
     [SerializeField] private float bulletInterval = 0.1f;
     [SerializeField] private float attackCooldown = 3f;
     [SerializeField] private float bulletMaxDistance = 15f;
