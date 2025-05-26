@@ -17,6 +17,7 @@ MonoBehaviour:
   attackDescription: A melee attack, stomping enemies by its roots legs
   characterDescription: He's a hybrid tree.
   maxHP: 120
+  currentHP: 120
   speed: 10
   attackPower: 50
   characterPrefab: {fileID: 3857542695622619987, guid: 3220374bfeae9a54cb57c5232df0f2f0, type: 3}

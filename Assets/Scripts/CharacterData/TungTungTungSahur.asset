@@ -17,6 +17,7 @@ MonoBehaviour:
   attackDescription: Swing of Death
   characterDescription: A hybrid humanoid
   maxHP: 100
+  currentHP: 100
   speed: 65
   attackPower: 70
   characterPrefab: {fileID: 7586402160338637091, guid: cac5384007ade574c9cd29effebe1c6f, type: 3}

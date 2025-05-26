@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -8445104774744932578}
   - component: {fileID: 2099734102686044645}
   - component: {fileID: 4786918656276701260}
+  - component: {fileID: 1469180312965822731}
   m_Layer: 0
   m_Name: Tralalero Tralala
   m_TagString: Enemy
@@ -85,7 +86,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842166789423210765}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -210,6 +211,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d0e1de5231e70c744930e0b8cb13b2a4, type: 2}
   - {fileID: 11400000, guid: 6fac243aee4e9ff4894dea49e176706f, type: 2}
   numberOfDrops: 1
+--- !u!114 &1469180312965822731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842166789423210765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fa6ceccff42b54bb8cac75457aa0a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &4106562171997451004
 GameObject:
   m_ObjectHideFlags: 0

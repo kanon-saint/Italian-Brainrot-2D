@@ -15,8 +15,8 @@ public class CharacterSpawner : MonoBehaviour
             GameObject characterInstance = Instantiate(selectedData.characterPrefab, spawnPoint.position, Quaternion.identity);
 
             // Try to get a health component if you have one (optional)
-            float currentHP = selectedData.maxHP; // Default to max HP
-            float maxHP = selectedData.maxHP;
+            int currentHP = selectedData.maxHP; // Default to max HP
+            int maxHP = selectedData.maxHP;
 
             // Initialize HUD
             if (hud != null)

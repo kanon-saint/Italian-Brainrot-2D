@@ -55,7 +55,7 @@ public class CharacterHUD : MonoBehaviour
             timerText.text = $"{minutes:00}:{seconds:00}";
     }
 
-    public void InitializeHUD(Sprite icon, float currentHP, float maxHPValue)
+    public void InitializeHUD(Sprite icon, int currentHP, int maxHPValue)
     {
         if (iconImage == null || hpSlider == null || hpText == null || expSlider == null || levelText == null)
         {
@@ -68,10 +68,11 @@ public class CharacterHUD : MonoBehaviour
         maxHP = maxHPValue;
         hpSlider.maxValue = maxHP;
         hpSlider.value = currentHP;
-        hpText.text = $"{(int)currentHP} / {(int)maxHP}";
+        hpText.text = $"{currentHP} / {maxHP}";
 
         UpdateUI();
     }
+
 
     public void AddExperience(int amount)
     {
@@ -97,11 +98,12 @@ public class CharacterHUD : MonoBehaviour
     }
 
 
-    public void UpdateHP(float currentHP)
+    public void UpdateHP(int currentHP)
     {
         hpSlider.value = currentHP;
-        hpText.text = $"{(int)currentHP} / {(int)maxHP}";
+        hpText.text = $"{currentHP} / {(int)maxHP}";
     }
+
     public void ResetExperience()
     {
         currentLevel = 0;

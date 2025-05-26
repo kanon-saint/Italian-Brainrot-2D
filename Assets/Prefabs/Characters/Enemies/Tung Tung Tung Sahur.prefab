@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 5417689889627673825}
   - component: {fileID: -2039357872357522068}
   - component: {fileID: -1122228144077605582}
+  - component: {fileID: 6943408212163235895}
   m_Layer: 0
   m_Name: Tung Tung Tung Sahur
   m_TagString: Enemy
@@ -480,7 +481,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7586402160338637091}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -559,6 +560,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d0e1de5231e70c744930e0b8cb13b2a4, type: 2}
   - {fileID: 11400000, guid: 6fac243aee4e9ff4894dea49e176706f, type: 2}
   numberOfDrops: 1
+--- !u!114 &6943408212163235895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586402160338637091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fa6ceccff42b54bb8cac75457aa0a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &7665738502694317467
 GameObject:
   m_ObjectHideFlags: 0

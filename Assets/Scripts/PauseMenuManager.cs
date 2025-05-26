@@ -71,6 +71,11 @@ public class PauseMenuManager : MonoBehaviour
     public void ConfirmQuitToMainMenu()
     {
         Time.timeScale = 1f;
+
+        if (GameManager.Instance?.selectedCharacter != null)
+        {
+            GameManager.Instance.selectedCharacter.ResetHP();
+        }
         SceneManager.LoadScene("MainMenu");
     }
 

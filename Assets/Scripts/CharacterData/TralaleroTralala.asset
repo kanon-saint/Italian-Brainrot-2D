@@ -17,6 +17,7 @@ MonoBehaviour:
   attackDescription: A powerful shark bite that crushes anything.
   characterDescription: A hybrid shark that wears Nike shoes.
   maxHP: 90
+  currentHP: 90
   speed: 7
   attackPower: 75
   characterPrefab: {fileID: 842166789423210765, guid: 0e3f69b42bcf1e14e9a2773701789193, type: 3}
