@@ -44,10 +44,13 @@ public class ProjectileAttackManager : MonoBehaviour
 
         Vector3 direction = (mousePos - transform.position).normalized;
 
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0f, 0f, angle - 90f);
+
         // If projectile prefab is set, instantiate and shoot it
         if (defaultAttackPfx != null)
         {
-            GameObject projectile = Instantiate(defaultAttackPfx, transform.position, Quaternion.identity);
+            GameObject projectile = Instantiate(defaultAttackPfx, transform.position, rotation);
             Projectile projectileScript = projectile.GetComponent<Projectile>();
 
             if (projectileScript != null)

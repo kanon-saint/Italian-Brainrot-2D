@@ -18,7 +18,6 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        transform.rotation = Quaternion.Euler(0f, 0f, 90f);
     }
 
     void Update()
