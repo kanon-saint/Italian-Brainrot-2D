@@ -7862,10 +7862,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 307334417}
     m_Modifications:
-    - target: {fileID: 1001926791041044962, guid: 92908617f55baa44ba26e803b7cbe07e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6018707281044292004, guid: 92908617f55baa44ba26e803b7cbe07e, type: 3}
       propertyPath: m_Name
       value: PF Props Stone Coffin V
@@ -8242,10 +8238,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7661547168561425326, guid: 1187825e9fe0b2d43b4165401f8a2634, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8853,10 +8845,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8885295337849773011, guid: e7992610dfdd8dc42a6efeca9799109b, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9839,10 +9827,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 307334417}
     m_Modifications:
-    - target: {fileID: 1542746768553536640, guid: 60883db31c41a0e4bbc44bc7ab436df7, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 2119760661395641816, guid: 60883db31c41a0e4bbc44bc7ab436df7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.328606
@@ -11273,10 +11257,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6961443436893999171, guid: fe8588a9f8b541a4da29731803add862, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11501,10 +11481,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 307334417}
     m_Modifications:
-    - target: {fileID: 1607032930559632282, guid: 75f5b62be58563f498e6340321a8fbd3, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6693360644243187153, guid: 75f5b62be58563f498e6340321a8fbd3, type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken
@@ -17996,10 +17972,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 307334417}
     m_Modifications:
-    - target: {fileID: 7513251009229696617, guid: be819f9f7896dea468831b4fe7ecc6e8, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 7580338325387282557, guid: be819f9f7896dea468831b4fe7ecc6e8, type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar X3 (1)
@@ -19023,10 +18995,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 307334417}
     m_Modifications:
-    - target: {fileID: 746141891166218486, guid: ea5950b442b899249a6826d2f60c1b43, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 791215630166466024, guid: ea5950b442b899249a6826d2f60c1b43, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.36761
@@ -19417,10 +19385,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3213671307263853462, guid: 9aca60d23acb4d1489a848ca4f6520ac, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46435,14 +46399,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Plant - Tree 03 (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 4954976800622883261, guid: f077946bec1ee9b43993d1b9b3e3b5bf, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 8133390679406271451, guid: f077946bec1ee9b43993d1b9b3e3b5bf, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8452885501383996457, guid: f077946bec1ee9b43993d1b9b3e3b5bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -40.633804

@@ -2463,9 +2463,6 @@ MonoBehaviour:
   - {fileID: 8716046863133730586, guid: 1214ae5ee53d69c49b4beea7dd799cc3, type: 3}
   - {fileID: 5438756171292906495, guid: 4b1c158f4f8f9554c968a06b22e37628, type: 3}
   - {fileID: 1667634838469218133, guid: f077946bec1ee9b43993d1b9b3e3b5bf, type: 3}
-  - {fileID: 7416954553940703757, guid: 2e58983a88cd046469a47852c86abab9, type: 3}
-  - {fileID: 7739167608146286596, guid: 10d38ece02f640b49b114ae4a0aaa26b, type: 3}
-  - {fileID: 8716046863133730586, guid: 1214ae5ee53d69c49b4beea7dd799cc3, type: 3}
   tileSize: 9
   viewRadius: 4
   maxTreesPerTile: 1
