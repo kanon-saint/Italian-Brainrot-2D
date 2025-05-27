@@ -140,6 +140,7 @@ MonoBehaviour:
   baseHealth: 10
   healthScalingFactor: 0.5
   scoreValue: 10
+  isBoss: 1
 --- !u!114 &3726813681478857079
 MonoBehaviour:
   m_ObjectHideFlags: 0
