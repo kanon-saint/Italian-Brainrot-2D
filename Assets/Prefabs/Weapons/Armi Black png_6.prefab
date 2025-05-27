@@ -167,9 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09fccda31326244bbc516f222a2acba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 41573b86ea3c8264abb62555513262d4, type: 2}
   radius: 3
   orbitSpeed: 180
   selfSpinSpeed: 360
+  axePrefab: {fileID: 7321375746978530054}
 --- !u!114 &411031716889003027
 MonoBehaviour:
   m_ObjectHideFlags: 0

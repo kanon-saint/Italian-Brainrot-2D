@@ -89,8 +89,24 @@ public class WeaponManager : MonoBehaviour
         if (attachedWeapons.TryGetValue(weaponData.weaponName, out GameObject oldWeapon))
         {
             if (oldWeapon != null)
+            {
+                // Destroy any child axes that may have been created
+                AxeOrbit oldAxeOrbit = oldWeapon.GetComponent<AxeOrbit>();
+                if (oldAxeOrbit != null && oldAxeOrbit.orbitingAxes != null)
+                {
+                    for (int i = 1; i < oldAxeOrbit.orbitingAxes.Length; i++)
+                    {
+                        if (oldAxeOrbit.orbitingAxes[i] != null)
+                        {
+                            Destroy(oldAxeOrbit.orbitingAxes[i].gameObject);
+                        }
+                    }
+                }
                 Destroy(oldWeapon);
+            }
+
         }
+        
 
         // Instantiate and attach new weapon
         GameObject newWeapon = Instantiate(weaponData.prefab, player.transform);
