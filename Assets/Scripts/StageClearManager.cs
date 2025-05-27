@@ -7,7 +7,7 @@ public class StageClearManager : MonoBehaviour
     public static StageClearManager Instance;
 
     [SerializeField] private GameObject stageClearedPanel;
-    [SerializeField] private float delayBeforeNextScene = 3f; // Optional delay
+    [SerializeField] private float delayBeforeNextScene = 3f;
 
     private void Awake()
     {
@@ -30,15 +30,22 @@ public class StageClearManager : MonoBehaviour
             Time.timeScale = 0f;
         }
 
-        // Proceed to next scene after a short delay (in real time)
         StartCoroutine(ProceedToNextSceneAfterDelay());
     }
 
     private IEnumerator ProceedToNextSceneAfterDelay()
     {
-        yield return new WaitForSecondsRealtime(delayBeforeNextScene); // Use real time while paused
+        yield return new WaitForSecondsRealtime(delayBeforeNextScene);
 
-        Time.timeScale = 1f; // Resume time *after* the delay
+        // ✅ Save current score using ScoreManager
+        if (ScoreManager.Instance != null)
+        {
+            int currentScore = ScoreManager.Instance.GetScore();
+            PlayerPrefs.SetInt("Score", currentScore);
+            PlayerPrefs.Save();
+        }
+
+        Time.timeScale = 1f;
 
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
@@ -51,5 +58,4 @@ public class StageClearManager : MonoBehaviour
             Debug.Log("No more scenes. Game complete!");
         }
     }
-
 }
