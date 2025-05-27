@@ -102,8 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf00f8a43211329438f21989c4c5a4f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 9f74aa87efa471344aadd7e492ba9090, type: 2}
+  baseDamage: 10
+  damagePerLevel: 2
   speed: 10
-  attackDamage: 10
 --- !u!50 &-1762684896427767812
 Rigidbody2D:
   serializedVersion: 5

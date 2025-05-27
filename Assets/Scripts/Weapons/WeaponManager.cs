@@ -57,7 +57,39 @@ public class WeaponManager : MonoBehaviour
         Time.timeScale = 0f;
         powerUpPanel.SetActive(true);
 
-        List<WeaponData> choices = GetRandomWeapons(3);
+        CharacterData selectedData = GameManager.Instance.selectedCharacter;
+        Debug.Log($"Selected character: {selectedData.characterName}");
+        string playerName = selectedData.characterName.ToLower();
+
+        // Build weapon pool
+        List<WeaponData> filteredWeapons = new();
+        foreach (var weapon in allWeapons)
+        {
+            if (weapon == null) continue;
+
+            string wName = weapon.weaponName.ToLower();
+
+            // Always include core weapons
+            if (wName == "axe" || wName == "fireball" || wName == "laser" || wName == "death zone")
+            {
+                filteredWeapons.Add(weapon);
+            }
+            // Conditionally include
+            else if (wName == "club" && playerName.Contains("tung tung tung sahur"))
+            {
+                filteredWeapons.Add(weapon);
+            }
+            else if (wName == "bite" && playerName.Contains("tralalero tralala"))
+            {
+                filteredWeapons.Add(weapon);
+            }
+            else if (wName == "thorn" && playerName.Contains("br br patapim"))
+            {
+                filteredWeapons.Add(weapon);
+            }
+        }
+
+        List<WeaponData> choices = GetRandomWeaponsFromPool(filteredWeapons, 3);
 
         for (int i = 0; i < weaponButtons.Length; i++)
         {
@@ -72,6 +104,7 @@ public class WeaponManager : MonoBehaviour
             }
         }
     }
+
 
     public void EquipWeapon(WeaponData weaponData)
     {
@@ -142,6 +175,24 @@ public class WeaponManager : MonoBehaviour
 
         return result;
     }
+
+    private List<WeaponData> GetRandomWeaponsFromPool(List<WeaponData> pool, int count)
+    {
+        List<WeaponData> result = new();
+        List<WeaponData> tempPool = new(pool);
+
+        int actualCount = Mathf.Min(count, tempPool.Count);
+
+        for (int i = 0; i < actualCount; i++)
+        {
+            int index = Random.Range(0, tempPool.Count);
+            result.Add(tempPool[index]);
+            tempPool.RemoveAt(index);
+        }
+
+        return result;
+    }
+
 
     public void ResetAllWeaponLevels()
     {

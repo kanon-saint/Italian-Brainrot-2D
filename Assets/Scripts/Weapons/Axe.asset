@@ -16,3 +16,4 @@ MonoBehaviour:
   icon: {fileID: 1209845062947907247, guid: 2e0f779a5fe657246acc6ea6b07536eb, type: 3}
   prefab: {fileID: 7321375746978530054, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
   description: Add a swirling axe around your brainrot.
+  level: 0
