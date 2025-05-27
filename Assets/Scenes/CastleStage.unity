@@ -67379,7 +67379,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 218319667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
+  m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
@@ -67393,12 +67393,8 @@ MonoBehaviour:
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
   timedSpawns: []
-  spawnRanges:
-  - startTime: 30
-    endTime: 60
-    enemyPrefabs:
-    - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
-  groundTilemap: {fileID: 0}
+  spawnRanges: []
+  groundTilemap: {fileID: 191607672}
 --- !u!4 &228993143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: cfa0a5ef94fb05d4f97d095a05dc55c5, type: 3}
@@ -80544,7 +80540,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 582058068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
+  m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
@@ -80558,12 +80554,8 @@ MonoBehaviour:
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
   timedSpawns: []
-  spawnRanges:
-  - startTime: 30
-    endTime: 60
-    enemyPrefabs:
-    - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
-  groundTilemap: {fileID: 0}
+  spawnRanges: []
+  groundTilemap: {fileID: 191607672}
 --- !u!4 &589683818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: e54d3c80cde4e314eae0912eca6a93ae, type: 3}
@@ -83808,7 +83800,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1501395507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
+  m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
@@ -83822,12 +83814,8 @@ MonoBehaviour:
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
   timedSpawns: []
-  spawnRanges:
-  - startTime: 30
-    endTime: 60
-    enemyPrefabs:
-    - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
-  groundTilemap: {fileID: 0}
+  spawnRanges: []
+  groundTilemap: {fileID: 191607672}
 --- !u!1001 &1518284835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84079,7 +84067,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621975630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
+  m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
@@ -84093,12 +84081,8 @@ MonoBehaviour:
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
   timedSpawns: []
-  spawnRanges:
-  - startTime: 30
-    endTime: 60
-    enemyPrefabs:
-    - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
-  groundTilemap: {fileID: 0}
+  spawnRanges: []
+  groundTilemap: {fileID: 191607672}
 --- !u!4 &1622473246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: cfa0a5ef94fb05d4f97d095a05dc55c5, type: 3}
@@ -84445,7 +84429,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1660550450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
+  m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
@@ -84459,12 +84443,8 @@ MonoBehaviour:
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
   timedSpawns: []
-  spawnRanges:
-  - startTime: 30
-    endTime: 60
-    enemyPrefabs:
-    - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
-  groundTilemap: {fileID: 0}
+  spawnRanges: []
+  groundTilemap: {fileID: 191607672}
 --- !u!4 &1667343993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: 42d58802fe231b14c8692b0c06082f5d, type: 3}
@@ -85993,7 +85973,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2011232187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
+  m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
@@ -86007,12 +85987,8 @@ MonoBehaviour:
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
   timedSpawns: []
-  spawnRanges:
-  - startTime: 30
-    endTime: 60
-    enemyPrefabs:
-    - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
-  groundTilemap: {fileID: 0}
+  spawnRanges: []
+  groundTilemap: {fileID: 191607672}
 --- !u!1001 &2015554765
 PrefabInstance:
   m_ObjectHideFlags: 0
