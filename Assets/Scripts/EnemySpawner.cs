@@ -1,20 +1,21 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
 public class TimedEnemySpawn
 {
-    public float triggerTime;             // One-time spawn at this time
+    public float triggerTime;
     public GameObject enemyPrefab;
 }
 
 [System.Serializable]
 public class TimedEnemyRange
 {
-    public float startTime;              // Time range start
-    public float endTime;                // Time range end
-    public GameObject[] enemyPrefabs;    // Enemies allowed to spawn during this time
+    public float startTime;
+    public float endTime;
+    public GameObject[] enemyPrefabs;
 }
 
 public class EnemySpawner : MonoBehaviour
@@ -31,6 +32,9 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Timed Spawn Ranges")]
     [SerializeField] private List<TimedEnemyRange> spawnRanges;
+
+    [Header("Tilemap Settings")]
+    [SerializeField] private Tilemap groundTilemap;
 
     private float elapsedTime = 0f;
 
@@ -59,7 +63,11 @@ public class EnemySpawner : MonoBehaviour
             {
                 Vector3 spawnPosition = spawnPoint ? spawnPoint.position : transform.position;
                 spawnPosition.z = -1f;
-                Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+
+                if (IsValidSpawnPosition(spawnPosition))
+                {
+                    Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+                }
             }
         }
     }
@@ -108,8 +116,24 @@ public class EnemySpawner : MonoBehaviour
             {
                 Vector3 spawnPosition = spawnPoint ? spawnPoint.position : transform.position;
                 spawnPosition.z = -1f;
-                Instantiate(timed.enemyPrefab, spawnPosition, Quaternion.identity);
+
+                if (IsValidSpawnPosition(spawnPosition))
+                {
+                    Instantiate(timed.enemyPrefab, spawnPosition, Quaternion.identity);
+                }
             }
         }
+    }
+
+    private bool IsValidSpawnPosition(Vector3 position)
+    {
+        if (groundTilemap == null)
+        {
+            Debug.LogWarning("Tilemap not assigned.");
+            return false;
+        }
+
+        Vector3Int cellPosition = groundTilemap.WorldToCell(position);
+        return groundTilemap.HasTile(cellPosition);
     }
 }
