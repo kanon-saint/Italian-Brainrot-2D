@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class TralaleroAttackManager : MonoBehaviour
 {
+    [Header("Attack Settings")]
     [SerializeField] private GameObject defaultAttackPfx;
     [SerializeField] private float attackDuration = 0.25f;
     [SerializeField] private float attackCooldown = 1f;
+
+    [Header("Audio Effects")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip attackSound;
 
     private GameObject attackArea;
     private GameObject currentAttackPfx;
@@ -52,14 +57,10 @@ public class TralaleroAttackManager : MonoBehaviour
     {
         attacking = true;
 
-        // Get mouse position in world space
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
 
-        // Determine direction: left or right
         bool isRight = mousePos.x >= transform.position.x;
-
-        // Set rotation to either right (0°) or left (180°)
         float angle = isRight ? 0f : 180f;
 
         attackArea.transform.rotation = Quaternion.Euler(0f, 0f, angle);
@@ -71,6 +72,17 @@ public class TralaleroAttackManager : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(angle, originalEuler.y, originalEuler.z);
 
             currentAttackPfx = Instantiate(defaultAttackPfx, attackArea.transform.position, rotation);
+        }
+
+        PlayAttackSound();
+    }
+
+    private void PlayAttackSound()
+    {
+        if (audioSource != null && attackSound != null)
+        {
+            audioSource.clip = attackSound;
+            audioSource.Play();
         }
     }
 }
