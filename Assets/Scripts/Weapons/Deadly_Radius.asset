@@ -17,3 +17,4 @@ MonoBehaviour:
   prefab: {fileID: 1707816925870976987, guid: 46ef0368ffd488146926993852e39f72, type: 3}
   description: Unleash a deadly aura that continuously damages all enemies within
     range.
+  level: 7
