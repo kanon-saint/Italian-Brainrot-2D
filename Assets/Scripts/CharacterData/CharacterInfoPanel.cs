@@ -18,6 +18,10 @@ public class CharacterInfoPanel : MonoBehaviour
     [SerializeField] private Image SpriteImageLeft;
     [SerializeField] private Image SpriteImageRight;
 
+    [Header("Audio Elements")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] characterSelectSound;
+
     public void SetInfo(CharacterData data)
     {
         nameText.text = data.characterName;
@@ -31,5 +35,21 @@ public class CharacterInfoPanel : MonoBehaviour
         portraitImage.sprite = data.characterImage;
         SpriteImageLeft.sprite = data.characterPng;
         SpriteImageRight.sprite = data.characterPng;
+
+        if (data.characterName.ToLower() == "br br patapim" && characterSelectSound.Length > 0)
+        {
+            audioSource.clip = characterSelectSound[0];
+            audioSource.Play();
+        }
+        else if (data.characterName.ToLower() == "tralalero tralala" && characterSelectSound.Length > 0)
+        {
+            audioSource.clip = characterSelectSound[1];
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.clip = characterSelectSound[2];
+            audioSource.Play();
+        }
     }
 }

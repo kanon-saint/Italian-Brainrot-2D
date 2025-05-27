@@ -175,3 +175,6 @@ MonoBehaviour:
   baseLaserDuration: 0.25
   baseLaserCooldown: 3
   positionOffset: {x: 4, y: 0, z: 0}
+  damagePerLevel: 3
+  durationPerLevel: 0.2
+  cooldownReductionPerLevel: 0.1
