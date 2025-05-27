@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BulletDamage : MonoBehaviour
+public class Plus2Damage : MonoBehaviour
 {
     [SerializeField] public int attackDamage;
     [SerializeField] private WeaponData weaponData;
@@ -14,9 +14,9 @@ public class BulletDamage : MonoBehaviour
             {
                 int finalDamage = attackDamage;
 
-                if (weaponData != null && weaponData.level > 4)
+                if (weaponData != null && weaponData.level > 5)
                 {
-                    int extraDamage = (weaponData.level - 4) * 2;
+                    int extraDamage = (weaponData.level - 5) * 2;
                     finalDamage += extraDamage;
                 }
 
