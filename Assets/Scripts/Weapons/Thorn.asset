@@ -16,4 +16,4 @@ MonoBehaviour:
   icon: {fileID: 9102672274290581655, guid: b35415c8a7dd31f459040ec85bb73fd9, type: 3}
   prefab: {fileID: 1309837563637131884, guid: 2e40d4382e5ee074e895a59028314735, type: 3}
   description: Brr Brr Patapim's basic attack.
-  level: 0
+  level: 1
