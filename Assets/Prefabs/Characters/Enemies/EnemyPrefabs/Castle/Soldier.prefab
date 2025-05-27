@@ -248,8 +248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 10
-  healthScalingFactor: 0.5
-  scoreValue: 10
+  healthScalingFactor: 0
+  scoreValue: 5
   isBoss: 0
 --- !u!114 &1653769572086115968
 MonoBehaviour:
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77fdc501858a63469f8dca15a425609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 2.5
   animator: {fileID: 6281655116277217310}
 --- !u!114 &4959433053546518264
 MonoBehaviour:
@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fa6ceccff42b54bb8cac75457aa0a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  damageCooldown: 0.5
+  damage: 5
+  damageCooldown: 1
 --- !u!114 &-9096505058240451742
 MonoBehaviour:
   m_ObjectHideFlags: 0
