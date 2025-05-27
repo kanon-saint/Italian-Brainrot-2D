@@ -14,6 +14,12 @@ public class EnemyBehavior : MonoBehaviour
         {
             player = playerObj.transform;
         }
+
+        // Start Walk animation once at beginning
+        if (animator != null)
+        {
+            animator.Play("Walk");
+        }
     }
 
     private void Update()
@@ -24,8 +30,8 @@ public class EnemyBehavior : MonoBehaviour
         Vector3 move = direction * moveSpeed * Time.deltaTime;
 
         transform.position += move;
-        animator.SetFloat("Speed", move.magnitude / Time.deltaTime);
 
+        // Flip based on direction
         if (player.position.x < transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0); // Face left
