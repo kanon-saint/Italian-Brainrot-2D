@@ -10,6 +10,10 @@ public class Bullets : MonoBehaviour
     [SerializeField] private float attackCooldown = 3f;
     [SerializeField] private float bulletMaxDistance = 15f;
 
+    [Header("Audio Effects")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip bulletFireSound;
+
     private float attackTimer = 0f;
     private bool isFiring = false;
     private int bulletCount = 1;
@@ -36,8 +40,6 @@ public class Bullets : MonoBehaviour
     private void UpdateBulletCountBasedOnLevel()
     {
         if (weaponData == null) return;
-
-        // Set bullet count based on level (1 at level 1, up to 5 at level 5)
         bulletCount = Mathf.Clamp(weaponData.level, 1, 5);
     }
 
@@ -72,10 +74,21 @@ public class Bullets : MonoBehaviour
                 bullet.AddComponent<BulletLogic>().Init(transform.position, bulletSpeed, bulletMaxDistance);
             }
 
+            PlayBulletSound(); // 🔊
+
             yield return new WaitForSeconds(bulletInterval);
         }
 
         isFiring = false;
+    }
+
+    private void PlayBulletSound()
+    {
+        if (audioSource != null && bulletFireSound != null)
+        {
+            audioSource.clip = bulletFireSound;
+            audioSource.Play();
+        }
     }
 
     private class BulletLogic : MonoBehaviour
