@@ -106,7 +106,7 @@ public class WeaponManager : MonoBehaviour
             }
 
         }
-        
+
 
         // Instantiate and attach new weapon
         GameObject newWeapon = Instantiate(weaponData.prefab, player.transform);

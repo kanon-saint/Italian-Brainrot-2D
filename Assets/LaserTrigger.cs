@@ -16,12 +16,19 @@ public class LaserTrigger : MonoBehaviour
     private float laserDuration;
     private float laserCooldown;
 
+
+
+
     private void Start()
     {
         transform.position += positionOffset;
 
         laserCollider = GetComponent<Collider2D>();
         laserRenderer = GetComponent<SpriteRenderer>();
+
+        laserDamage = baseLaserDamage;
+        laserDuration = baseLaserDuration;
+        laserCooldown = baseLaserCooldown;
 
         ApplyWeaponLevelBehavior();
         StartCoroutine(LaserCycle());
@@ -37,47 +44,37 @@ public class LaserTrigger : MonoBehaviour
 
         int level = weaponData.level;
 
-        // Start from base values
-        laserDamage = baseLaserDamage;
-        laserDuration = baseLaserDuration;
-        laserCooldown = baseLaserCooldown;
-
         // You can fine-tune these values per level
         switch (level)
         {
             case 1:
-                laserDamage = baseLaserDamage;
-                laserDuration = baseLaserDuration;
-                laserCooldown = baseLaserCooldown;
+                // base values already assigned, so this is technically redundant
                 break;
             case 2:
-                laserDamage = baseLaserDamage;
-                laserDuration = laserDuration + 0.25f;
-                laserCooldown = laserCooldown - 0.5f;
+                laserDuration += 0.25f;
+                laserCooldown -= 0.5f;
                 break;
             case 3:
-                laserDamage = baseLaserDamage;
-                laserDuration = laserDuration + 0.50f;
-                laserCooldown = laserCooldown - 0.5f;
+                laserDuration += 0.5f;
+                laserCooldown -= 0.5f;
                 break;
             case 4:
-                laserDamage = baseLaserDamage + 2;
-                laserDuration = laserDuration + 1f;
-                laserCooldown = laserCooldown - 0.5f;
+                laserDamage += 2;
+                laserDuration += 1f;
+                laserCooldown -= 0.5f;
                 break;
             default:
                 if (level > 4)
                 {
                     laserDamage += 2;
-                    // Optionally scale further with level
-                    laserDuration += (level - 4) * 0.25f;
+                    laserDuration += (level - 4) * 0.2f;
                     laserCooldown -= (level - 4) * 0.1f;
+
+                    // Clamp cooldown to avoid going negative
+                    laserCooldown = Mathf.Max(0.5f, laserCooldown);
                 }
                 break;
         }
-
-        // Clamp cooldown to avoid going negative
-        laserCooldown = Mathf.Max(0.5f, laserCooldown);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
