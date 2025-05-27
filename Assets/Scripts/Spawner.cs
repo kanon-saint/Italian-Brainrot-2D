@@ -9,8 +9,14 @@ public class Spawner : MonoBehaviour
     public int viewRadius = 4;
     public int maxTreesPerTile = 1;
 
+    [Header("Other Objects Management")]
+    [SerializeField] string otherObjectTag = "ExpOrb"; 
+
     private Dictionary<Vector2Int, TileData> spawnedTiles = new Dictionary<Vector2Int, TileData>();
     private Dictionary<Vector2Int, List<TreeData>> savedTreePositions = new Dictionary<Vector2Int, List<TreeData>>();
+
+    private Dictionary<Vector2Int, List<GameObject>> activeManagedObjects = new Dictionary<Vector2Int, List<GameObject>>();
+
     private Vector2Int currentTileCoord;
 
     void Start()
@@ -70,25 +76,17 @@ public class Spawner : MonoBehaviour
                                 Random.Range(0.5f, tileSize - 0.5f),
                                 0
                             );
-
                             Vector3 treePos = tilePosition + offset;
-                            
-                            // Randomly select a tree prefab from the array
                             int treeIndex = Random.Range(0, treePrefabs.Length);
                             GameObject selectedTreePrefab = treePrefabs[treeIndex];
-                            
                             GameObject tree = Instantiate(selectedTreePrefab, treePos, Quaternion.identity);
                             treeList.Add(tree);
-                            
-                            // Save both position and prefab index
                             treeDataList.Add(new TreeData(treePos, treeIndex));
                         }
-
                         savedTreePositions[tileCoord] = treeDataList;
                     }
                     else
                     {
-                        // Reuse saved tree positions and types
                         foreach (TreeData treeData in savedTreePositions[tileCoord])
                         {
                             GameObject tree = Instantiate(treePrefabs[treeData.prefabIndex], treeData.position, Quaternion.identity);
@@ -98,8 +96,21 @@ public class Spawner : MonoBehaviour
 
                     spawnedTiles[tileCoord] = new TileData(tile, treeList);
                 }
+
+                if (activeManagedObjects.ContainsKey(tileCoord))
+                {
+                    foreach (GameObject obj in activeManagedObjects[tileCoord])
+                    {
+                        if (obj != null && !obj.activeSelf)
+                        {
+                            obj.SetActive(true);
+                        }
+                    }
+                }
             }
         }
+
+        FindAndManageOtherObjects();
     }
 
     void CleanupDistantTiles(Vector2Int centerTile)
@@ -119,6 +130,18 @@ public class Spawner : MonoBehaviour
                 {
                     Destroy(tree);
                 }
+
+                if (activeManagedObjects.ContainsKey(coord))
+                {
+                    foreach (GameObject obj in activeManagedObjects[coord])
+                    {
+                        if (obj != null && obj.activeSelf)
+                        {
+                            obj.SetActive(false);
+                        }
+                    }
+                }
+
                 tilesToRemove.Add(coord);
             }
         }
@@ -129,6 +152,47 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    void FindAndManageOtherObjects()
+    {
+        GameObject[] allOtherObjects = GameObject.FindGameObjectsWithTag(otherObjectTag);
+
+        HashSet<Vector2Int> currentViewTiles = new HashSet<Vector2Int>();
+        for (int dx = -viewRadius; dx <= viewRadius; dx++)
+        {
+            for (int dy = -viewRadius; dy <= viewRadius; dy++)
+            {
+                currentViewTiles.Add(new Vector2Int(currentTileCoord.x + dx, currentTileCoord.y + dy));
+            }
+        }
+
+        foreach (GameObject obj in allOtherObjects)
+        {
+            if (obj == null) continue;
+
+            Vector2Int objTileCoord = GetTileCoord(obj.transform.position);
+
+            if (!activeManagedObjects.ContainsKey(objTileCoord))
+            {
+                activeManagedObjects[objTileCoord] = new List<GameObject>();
+            }
+
+            if (!activeManagedObjects[objTileCoord].Contains(obj))
+            {
+                activeManagedObjects[objTileCoord].Add(obj);
+            }
+
+            if (currentViewTiles.Contains(objTileCoord))
+            {
+                if (!obj.activeSelf) obj.SetActive(true);
+            }
+            else
+            {
+                if (obj.activeSelf) obj.SetActive(false);
+            }
+        }
+    }
+
+    // --- Data Structures ---
     class TileData
     {
         public GameObject tileObject;
@@ -141,7 +205,6 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    // Helper class to store tree position and prefab index
     class TreeData
     {
         public Vector3 position;

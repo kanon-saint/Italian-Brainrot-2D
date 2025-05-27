@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8035069480842895004}
   m_Layer: 0
   m_Name: Food2
-  m_TagString: Untagged
+  m_TagString: ExpOrb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
