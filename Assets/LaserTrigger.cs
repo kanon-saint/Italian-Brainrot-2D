@@ -9,6 +9,11 @@ public class LaserTrigger : MonoBehaviour
     [SerializeField] private float baseLaserCooldown;
     [SerializeField] private Vector3 positionOffset;
 
+    // How much each level improves the laser
+    [SerializeField] private int damagePerLevel = 1;
+    [SerializeField] private float durationPerLevel = 0.2f;
+    [SerializeField] private float cooldownReductionPerLevel = 0.1f;
+
     private Collider2D laserCollider;
     private SpriteRenderer laserRenderer;
 
@@ -16,19 +21,12 @@ public class LaserTrigger : MonoBehaviour
     private float laserDuration;
     private float laserCooldown;
 
-
-
-
     private void Start()
     {
         transform.position += positionOffset;
 
         laserCollider = GetComponent<Collider2D>();
         laserRenderer = GetComponent<SpriteRenderer>();
-
-        laserDamage = baseLaserDamage;
-        laserDuration = baseLaserDuration;
-        laserCooldown = baseLaserCooldown;
 
         ApplyWeaponLevelBehavior();
         StartCoroutine(LaserCycle());
@@ -42,39 +40,15 @@ public class LaserTrigger : MonoBehaviour
             return;
         }
 
-        int level = weaponData.level;
+        int level = Mathf.Max(1, weaponData.level); // Ensure level is at least 1
 
-        // You can fine-tune these values per level
-        switch (level)
-        {
-            case 1:
-                // base values already assigned, so this is technically redundant
-                break;
-            case 2:
-                laserDuration += 0.25f;
-                laserCooldown -= 0.5f;
-                break;
-            case 3:
-                laserDuration += 0.5f;
-                laserCooldown -= 0.5f;
-                break;
-            case 4:
-                laserDamage += 2;
-                laserDuration += 1f;
-                laserCooldown -= 0.5f;
-                break;
-            default:
-                if (level > 4)
-                {
-                    laserDamage += 2;
-                    laserDuration += (level - 4) * 0.2f;
-                    laserCooldown -= (level - 4) * 0.1f;
+        // Apply scalable improvements
+        laserDamage = baseLaserDamage + (level - 1) * damagePerLevel;
+        laserDuration = baseLaserDuration + (level - 1) * durationPerLevel;
+        laserCooldown = baseLaserCooldown - (level - 1) * cooldownReductionPerLevel;
 
-                    // Clamp cooldown to avoid going negative
-                    laserCooldown = Mathf.Max(0.5f, laserCooldown);
-                }
-                break;
-        }
+        // Clamp cooldown to a safe minimum
+        laserCooldown = Mathf.Max(0.5f, laserCooldown);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
