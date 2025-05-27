@@ -2219,9 +2219,7 @@ MonoBehaviour:
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 0
     endTime: 15
@@ -2292,9 +2290,7 @@ MonoBehaviour:
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 0
     endTime: 15
@@ -2685,9 +2681,7 @@ MonoBehaviour:
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 0
     endTime: 15
@@ -2758,9 +2752,7 @@ MonoBehaviour:
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 0
     endTime: 15
@@ -2904,9 +2896,7 @@ MonoBehaviour:
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 0
     endTime: 15
