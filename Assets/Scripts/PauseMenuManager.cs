@@ -71,6 +71,7 @@ public class PauseMenuManager : MonoBehaviour
     public void ConfirmQuitToMainMenu()
     {
         Time.timeScale = 1f;
+        ResetWeapons();
 
         if (GameManager.Instance?.selectedCharacter != null)
         {
@@ -83,5 +84,17 @@ public class PauseMenuManager : MonoBehaviour
     {
         confirmationPanel.SetActive(false);
         pauseMenuPanel.SetActive(true);
+    }
+
+    private void ResetWeapons()
+    {
+        if (WeaponManager.Instance != null)
+        {
+            WeaponManager.Instance.ResetAllWeaponLevels();
+        }
+        else
+        {
+            Debug.LogWarning("WeaponManager instance not found!");
+        }
     }
 }
