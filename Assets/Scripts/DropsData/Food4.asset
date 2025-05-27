@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54aa2e5b4a15789488550a202793d442, type: 3}
   m_Name: Food4
   m_EditorClassIdentifier: 
-  prefab: {fileID: 333175293292985575, guid: a6e2319de4c30a04c83efe0bbc85e722, type: 3}
+  prefab: {fileID: 532655019190530940, guid: d66b85848f2744c40a2c8c107db4e12d, type: 3}
   healValue: 20
   dropChance: 0.002
