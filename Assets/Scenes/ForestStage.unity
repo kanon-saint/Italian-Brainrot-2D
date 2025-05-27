@@ -2349,6 +2349,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 10872136}
 --- !u!1 &354359250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,6 +2409,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 10872136}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,6 +2806,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 10872136}
 --- !u!1 &769283714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
@@ -2880,6 +2883,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 10872136}
 --- !u!1 &1107790824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,6 +2943,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 10872136}
 --- !u!1 &1522998523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 7277dd75e907b27448ec1de08238d0bb, type: 3}
@@ -3166,6 +3171,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 10872136}
 --- !u!1001 &2618441672522001200
 PrefabInstance:
   m_ObjectHideFlags: 0

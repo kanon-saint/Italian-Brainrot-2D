@@ -67398,6 +67398,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 0}
 --- !u!4 &228993143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: cfa0a5ef94fb05d4f97d095a05dc55c5, type: 3}
@@ -67701,6 +67702,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f826bf48ad5bedc4ab6cabe6c4e498e8, type: 3}
+--- !u!1001 &274137019
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2338974743580543058, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: baseHealth
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3726813681478857079, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336855006976364932, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_Name
+      value: Boss Swordsman
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1ce511336178af479cba475c2047586, type: 3}
 --- !u!1001 &304686765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80648,14 +80714,13 @@ MonoBehaviour:
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 7336855006976364932, guid: e1ce511336178af479cba475c2047586, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 30
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 0}
 --- !u!4 &589683818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: e54d3c80cde4e314eae0912eca6a93ae, type: 3}
@@ -84547,6 +84612,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 0}
 --- !u!1001 &1518284835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84817,6 +84883,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 0}
 --- !u!4 &1622473246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: cfa0a5ef94fb05d4f97d095a05dc55c5, type: 3}
@@ -85266,6 +85333,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 0}
 --- !u!4 &1667343993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: 42d58802fe231b14c8692b0c06082f5d, type: 3}
@@ -86902,6 +86970,7 @@ MonoBehaviour:
     endTime: 60
     enemyPrefabs:
     - {fileID: 7144941451610864431, guid: 7fef4ce6fb93d1740bcea9244bc77dd4, type: 3}
+  groundTilemap: {fileID: 0}
 --- !u!1001 &2015554765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87364,3 +87433,4 @@ SceneRoots:
   - {fileID: 1189946855}
   - {fileID: 998810266}
   - {fileID: 1721352314}
+  - {fileID: 274137019}
