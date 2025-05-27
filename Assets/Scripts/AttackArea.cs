@@ -12,7 +12,6 @@ public class AttackArea : MonoBehaviour
             if (enemyAttributes != null)
             {
                 enemyAttributes.TakeDamage(attackDamage);
-                Debug.Log("Enemy hit! Remaining HP: " + enemyAttributes.health);
             }
         }
     }

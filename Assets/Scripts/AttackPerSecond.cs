@@ -73,7 +73,6 @@ public class AttackPerSecond : MonoBehaviour
                     if (enemyAttributes != null)
                     {
                         enemyAttributes.TakeDamage(currentDamagePerSecond);
-                        Debug.Log($"Enemy hit! Damage: {currentDamagePerSecond}, Remaining HP: {enemyAttributes.health}");
                     }
                 }
             }
