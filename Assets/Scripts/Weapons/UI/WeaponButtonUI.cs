@@ -57,15 +57,8 @@ public class WeaponButtonUI : MonoBehaviour
     {
         if (weaponData != null)
         {
-            if (weaponData.level < 4)
-            {
-                weaponData.level += 1;
-                Debug.Log($"Weapon '{weaponData.weaponName}' level increased to {weaponData.level}");
-            }
-            else
-            {
-                Debug.Log($"Weapon '{weaponData.weaponName}' is already at max level (4).");
-            }
+            weaponData.level += 1;
+            Debug.Log($"Weapon '{weaponData.weaponName}' level increased to {weaponData.level}");
         }
 
         if (weaponManager != null && weaponData != null)

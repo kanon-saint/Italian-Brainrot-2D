@@ -40,25 +40,30 @@ public class LaserTrigger : MonoBehaviour
         // You can fine-tune these values per level
         switch (level)
         {
-            default:
+            case 1:
                 laserDamage = baseLaserDamage;
                 laserDuration = baseLaserDuration;
                 laserCooldown = baseLaserCooldown;
                 break;
             case 2:
                 laserDamage = baseLaserDamage;
-                laserDuration = baseLaserDuration + 0.25f;
-                laserCooldown = baseLaserCooldown - 0.5f;
+                laserDuration = laserDuration + 0.25f;
+                laserCooldown = laserCooldown - 0.5f;
                 break;
             case 3:
                 laserDamage = baseLaserDamage;
-                laserDuration = baseLaserDuration + 0.50f;
-                laserCooldown = baseLaserCooldown - 0.5f;
+                laserDuration = laserDuration + 0.50f;
+                laserCooldown = laserCooldown - 0.5f;
                 break;
             case 4:
-                laserDamage = baseLaserDamage + 5;
-                laserDuration = baseLaserDuration + 1f;
-                laserCooldown = baseLaserCooldown - 0.5f;
+                laserDamage = baseLaserDamage + 2;
+                laserDuration = laserDuration + 1f;
+                laserCooldown = laserCooldown - 0.5f;
+                break;
+            default:
+                laserDamage = laserDamage + 2;
+                laserDuration = laserDuration;
+                laserCooldown = laserCooldown;
                 break;
         }
 
