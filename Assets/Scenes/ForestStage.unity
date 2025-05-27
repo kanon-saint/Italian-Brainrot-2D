@@ -2335,9 +2335,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
-  - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
+  - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
   spawnPoint: {fileID: 172079768}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
@@ -2393,9 +2394,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
-  - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
+  - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
   spawnPoint: {fileID: 354359251}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
@@ -2786,14 +2788,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
-  - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
+  - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
   spawnPoint: {fileID: 684964760}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns: []
+  timedSpawns:
+  - triggerTime: 60
+    enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
   spawnRanges:
   - startTime: 30
     endTime: 60
@@ -2861,9 +2866,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
-  - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
+  - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
   spawnPoint: {fileID: 801880133}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
@@ -2919,9 +2925,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
-  - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
+  - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
   spawnPoint: {fileID: 1107790825}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
@@ -3145,16 +3152,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
-  - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
+  - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
   spawnPoint: {fileID: 2008915773}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 4768649162270386852, guid: 20a46131ead287a48afc3c4ce034d9ca, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 30
     endTime: 60
