@@ -4,20 +4,20 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] GameObject objectToDuplicate; // Tile prefab
-    [SerializeField] GameObject treePrefab; // Tree prefab
+    [SerializeField] GameObject[] treePrefabs; // Array of different tree prefabs
     public int tileSize = 9;
     public int viewRadius = 4;
     public int maxTreesPerTile = 1;
 
     private Dictionary<Vector2Int, TileData> spawnedTiles = new Dictionary<Vector2Int, TileData>();
-    private Dictionary<Vector2Int, List<Vector3>> savedTreePositions = new Dictionary<Vector2Int, List<Vector3>>();
+    private Dictionary<Vector2Int, List<TreeData>> savedTreePositions = new Dictionary<Vector2Int, List<TreeData>>();
     private Vector2Int currentTileCoord;
 
     void Start()
     {
-        if (objectToDuplicate == null || treePrefab == null)
+        if (objectToDuplicate == null || treePrefabs == null || treePrefabs.Length == 0)
         {
-            Debug.LogError("Tile or Tree prefab is not assigned!");
+            Debug.LogError("Tile or Tree prefabs are not assigned!");
             return;
         }
 
@@ -61,7 +61,7 @@ public class Spawner : MonoBehaviour
                     if (!savedTreePositions.ContainsKey(tileCoord))
                     {
                         int treeCount = Random.Range(1, maxTreesPerTile + 1);
-                        List<Vector3> positions = new List<Vector3>();
+                        List<TreeData> treeDataList = new List<TreeData>();
 
                         for (int i = 0; i < treeCount; i++)
                         {
@@ -72,20 +72,26 @@ public class Spawner : MonoBehaviour
                             );
 
                             Vector3 treePos = tilePosition + offset;
-                            positions.Add(treePos);
-
-                            GameObject tree = Instantiate(treePrefab, treePos, Quaternion.identity);
+                            
+                            // Randomly select a tree prefab from the array
+                            int treeIndex = Random.Range(0, treePrefabs.Length);
+                            GameObject selectedTreePrefab = treePrefabs[treeIndex];
+                            
+                            GameObject tree = Instantiate(selectedTreePrefab, treePos, Quaternion.identity);
                             treeList.Add(tree);
+                            
+                            // Save both position and prefab index
+                            treeDataList.Add(new TreeData(treePos, treeIndex));
                         }
 
-                        savedTreePositions[tileCoord] = positions;
+                        savedTreePositions[tileCoord] = treeDataList;
                     }
                     else
                     {
-                        // Reuse saved tree positions
-                        foreach (Vector3 pos in savedTreePositions[tileCoord])
+                        // Reuse saved tree positions and types
+                        foreach (TreeData treeData in savedTreePositions[tileCoord])
                         {
-                            GameObject tree = Instantiate(treePrefab, pos, Quaternion.identity);
+                            GameObject tree = Instantiate(treePrefabs[treeData.prefabIndex], treeData.position, Quaternion.identity);
                             treeList.Add(tree);
                         }
                     }
@@ -132,6 +138,19 @@ public class Spawner : MonoBehaviour
         {
             this.tileObject = tile;
             this.trees = trees;
+        }
+    }
+
+    // Helper class to store tree position and prefab index
+    class TreeData
+    {
+        public Vector3 position;
+        public int prefabIndex;
+
+        public TreeData(Vector3 pos, int index)
+        {
+            position = pos;
+            prefabIndex = index;
         }
     }
 }
