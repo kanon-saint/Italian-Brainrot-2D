@@ -8,6 +8,8 @@ public class CharacterAttributes : MonoBehaviour
 
     [Header("Score")]
     [SerializeField] private int scoreValue = 10;
+    [SerializeField] private bool isBoss = false;
+
 
     private int health;
     private bool isDead = false;
@@ -30,6 +32,11 @@ public class CharacterAttributes : MonoBehaviour
 
             // Add score
             ScoreManager.Instance?.AddScore(scoreValue);
+
+            if (isBoss)
+            {
+                StageClearManager.Instance?.TriggerStageClear();
+            }
 
             Destroy(gameObject);
         }

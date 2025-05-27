@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Tree
   - Enemy
+  - ExpOrb
+  - ScoreText
   layers:
   - Default
   - TransparentFX

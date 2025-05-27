@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GraveyardStage.unity
     guid: 3d51c5a798953d2428e3f39d8c487d7d
+  - enabled: 1
+    path: Assets/Scenes/CastleStage.unity
+    guid: 024f66fb8aac0f84c90bbe777e8cd34f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

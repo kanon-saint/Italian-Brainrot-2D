@@ -219,6 +219,7 @@ MonoBehaviour:
   baseHealth: 10
   healthScalingFactor: 0
   scoreValue: 10
+  isBoss: 1
 --- !u!50 &2529406328762453837
 Rigidbody2D:
   serializedVersion: 5
