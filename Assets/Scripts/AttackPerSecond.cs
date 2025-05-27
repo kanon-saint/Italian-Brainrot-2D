@@ -49,9 +49,10 @@ public class AttackPerSecond : MonoBehaviour
                 currentDamagePerSecond = baseDamagePerSecond * 5; // 50
                 break;
             default:
-                if (level > 4)
+                if (level > 5)
                 {
-                    currentDamagePerSecond = baseDamagePerSecond + 2;
+                    int extraLevels = level - 5;
+                    currentDamagePerSecond = baseDamagePerSecond * 5 + (extraLevels * 2);
                 }
                 break;
             // Add more levels if needed

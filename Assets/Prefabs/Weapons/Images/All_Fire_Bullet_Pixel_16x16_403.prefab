@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5583310360331730345}
   - component: {fileID: 4028312687905116822}
   - component: {fileID: -3032320810319509580}
-  - component: {fileID: 7763321414081628102}
   - component: {fileID: 1600312053441188790}
+  - component: {fileID: 7478981972143858583}
   m_Layer: 0
   m_Name: All_Fire_Bullet_Pixel_16x16_403
   m_TagString: Untagged
@@ -178,7 +178,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7763321414081628102
+--- !u!114 &1600312053441188790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,12 +187,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1171729566265750509}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b904992e3f576498e7485b5e43c193, type: 3}
+  m_Script: {fileID: 11500000, guid: 3328d8a7d293b0a499d3cfe456f46929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
-  maxTravelDistance: 10
---- !u!114 &1600312053441188790
+  attackDamage: 10
+--- !u!114 &7478981972143858583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,7 +200,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1171729566265750509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3328d8a7d293b0a499d3cfe456f46929, type: 3}
+  m_Script: {fileID: 11500000, guid: b301e3bfe1ac6d0489d5f97b793c0fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
+  weaponData: {fileID: 11400000, guid: 29db4e7033b061440a9959bb2fa455d7, type: 2}
