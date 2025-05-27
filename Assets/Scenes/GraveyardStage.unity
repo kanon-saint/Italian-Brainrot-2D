@@ -4692,7 +4692,6 @@ MonoBehaviour:
   - {fileID: 3857542695622619987, guid: 3ea415cd602b08245a4529d3ed0141c4, type: 3}
   - {fileID: 842166789423210765, guid: 3062d43d0d6f59c4685187e7f53c2c13, type: 3}
   - {fileID: 7586402160338637091, guid: 8ec12158451d6794d96ffa5d584825ab, type: 3}
-  - {fileID: 885981495914534925, guid: 38bc0ba388751ab46ab70625b37313bc, type: 3}
   spawnPoint: {fileID: 434375767}
   spawnIntervalRange: {x: 2, y: 4}
 --- !u!1001 &439502960
@@ -8161,7 +8160,6 @@ MonoBehaviour:
   - {fileID: 3857542695622619987, guid: 3ea415cd602b08245a4529d3ed0141c4, type: 3}
   - {fileID: 842166789423210765, guid: 3062d43d0d6f59c4685187e7f53c2c13, type: 3}
   - {fileID: 7586402160338637091, guid: 8ec12158451d6794d96ffa5d584825ab, type: 3}
-  - {fileID: 885981495914534925, guid: 38bc0ba388751ab46ab70625b37313bc, type: 3}
   spawnPoint: {fileID: 838234507}
   spawnIntervalRange: {x: 2, y: 4}
 --- !u!4 &842040012 stripped
@@ -8904,7 +8902,6 @@ MonoBehaviour:
   - {fileID: 3857542695622619987, guid: 3ea415cd602b08245a4529d3ed0141c4, type: 3}
   - {fileID: 842166789423210765, guid: 3062d43d0d6f59c4685187e7f53c2c13, type: 3}
   - {fileID: 7586402160338637091, guid: 8ec12158451d6794d96ffa5d584825ab, type: 3}
-  - {fileID: 885981495914534925, guid: 38bc0ba388751ab46ab70625b37313bc, type: 3}
   spawnPoint: {fileID: 957762894}
   spawnIntervalRange: {x: 2, y: 4}
 --- !u!1001 &988353373
@@ -9990,7 +9987,6 @@ MonoBehaviour:
   - {fileID: 3857542695622619987, guid: 3ea415cd602b08245a4529d3ed0141c4, type: 3}
   - {fileID: 842166789423210765, guid: 3062d43d0d6f59c4685187e7f53c2c13, type: 3}
   - {fileID: 7586402160338637091, guid: 8ec12158451d6794d96ffa5d584825ab, type: 3}
-  - {fileID: 885981495914534925, guid: 38bc0ba388751ab46ab70625b37313bc, type: 3}
   spawnPoint: {fileID: 1094919312}
   spawnIntervalRange: {x: 2, y: 4}
 --- !u!1 &1101717562
@@ -10737,7 +10733,6 @@ MonoBehaviour:
   - {fileID: 3857542695622619987, guid: 3ea415cd602b08245a4529d3ed0141c4, type: 3}
   - {fileID: 842166789423210765, guid: 3062d43d0d6f59c4685187e7f53c2c13, type: 3}
   - {fileID: 7586402160338637091, guid: 8ec12158451d6794d96ffa5d584825ab, type: 3}
-  - {fileID: 885981495914534925, guid: 38bc0ba388751ab46ab70625b37313bc, type: 3}
   spawnPoint: {fileID: 1152211747}
   spawnIntervalRange: {x: 2, y: 4}
 --- !u!1 &1152423620
@@ -18978,7 +18973,6 @@ MonoBehaviour:
   - {fileID: 3857542695622619987, guid: 3ea415cd602b08245a4529d3ed0141c4, type: 3}
   - {fileID: 842166789423210765, guid: 3062d43d0d6f59c4685187e7f53c2c13, type: 3}
   - {fileID: 7586402160338637091, guid: 8ec12158451d6794d96ffa5d584825ab, type: 3}
-  - {fileID: 885981495914534925, guid: 38bc0ba388751ab46ab70625b37313bc, type: 3}
   spawnPoint: {fileID: 1614613164}
   spawnIntervalRange: {x: 2, y: 4}
 --- !u!4 &1615168155 stripped
