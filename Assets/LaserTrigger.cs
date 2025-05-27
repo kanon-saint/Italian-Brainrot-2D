@@ -88,7 +88,6 @@ public class LaserTrigger : MonoBehaviour
             if (enemyAttributes != null)
             {
                 enemyAttributes.TakeDamage(laserDamage);
-                Debug.Log($"Enemy hit! Damage: {laserDamage}, Remaining HP: {enemyAttributes.health}");
             }
         }
     }
