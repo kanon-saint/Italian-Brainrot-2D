@@ -852,6 +852,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2766113226606671224, guid: 18bdcd92b9751014da3d7e6a5c1dc48a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3400990256379163261, guid: 18bdcd92b9751014da3d7e6a5c1dc48a, type: 3}
       propertyPath: m_Name
       value: PF Props Wooden Gate Opened (1)
@@ -82304,6 +82308,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796629727497181049, guid: 18bdcd92b9751014da3d7e6a5c1dc48a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766113226606671224, guid: 18bdcd92b9751014da3d7e6a5c1dc48a, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400990256379163261, guid: 18bdcd92b9751014da3d7e6a5c1dc48a, type: 3}
