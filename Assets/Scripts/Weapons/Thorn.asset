@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Thorn
   m_EditorClassIdentifier: 
   weaponName: Thorn
-  icon: {fileID: -4738109338099310754, guid: 11cd14e61ba8df7458633fc960522f44, type: 3}
+  icon: {fileID: 9102672274290581655, guid: b35415c8a7dd31f459040ec85bb73fd9, type: 3}
   prefab: {fileID: 1309837563637131884, guid: 2e40d4382e5ee074e895a59028314735, type: 3}
   description: Brr Brr Patapim's basic attack.
   level: 0
