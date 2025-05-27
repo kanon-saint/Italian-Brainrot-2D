@@ -19,6 +19,8 @@ public class TimedEnemyRange
 
 public class EnemySpawner : MonoBehaviour
 {
+    
+    [SerializeField] private int maxEnemies = 5;
     [Header("General Spawn Settings")]
     [SerializeField] private GameObject[] defaultEnemies;
     [SerializeField] private Transform spawnPoint;
@@ -34,7 +36,6 @@ public class EnemySpawner : MonoBehaviour
 
     private float elapsedTime = 0f;
     private List<GameObject> activeEnemies = new List<GameObject>();
-    private int maxEnemies = 5;
 
     private void Start()
     {
