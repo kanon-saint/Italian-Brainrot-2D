@@ -3292,6 +3292,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
+--- !u!114 &4943483237449082723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6816432861127573276, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
+  m_PrefabInstance: {fileID: 4943483237449082722}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf7402bc094bca4599e8e6651039a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5022628545312869255 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7935881993559670120, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
@@ -3574,6 +3585,10 @@ PrefabInstance:
       propertyPath: 'weaponButtons.Array.data[2]'
       value: 
       objectReference: {fileID: 7090650339224545382}
+    - target: {fileID: 7038871655204034951, guid: 872b2e14f4d5c7146978a699a617bb04, type: 3}
+      propertyPath: 'weaponButtons.Array.data[3]'
+      value: 
+      objectReference: {fileID: 4943483237449082723}
     - target: {fileID: 8127939396154331234, guid: 872b2e14f4d5c7146978a699a617bb04, type: 3}
       propertyPath: m_Name
       value: WeaponManager
