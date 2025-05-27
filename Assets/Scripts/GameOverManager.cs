@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,7 @@ public class GameOverManager : MonoBehaviour
     public static GameOverManager Instance { get; private set; }
 
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private TextMeshProUGUI finalScoreText;
 
     private void Awake()
     {
@@ -35,13 +37,29 @@ public class GameOverManager : MonoBehaviour
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(true);
-            Time.timeScale = 0f;  // pause the game
+            Time.timeScale = 0f;
+
+            int currentScore = ScoreManager.Instance?.GetScore() ?? 0;
+            int highScore = PlayerPrefs.GetInt("HighScore", 0);
+
+            if (currentScore > highScore)
+            {
+                PlayerPrefs.SetInt("HighScore", currentScore);
+                PlayerPrefs.Save();
+                finalScoreText.text = $"New High Score!\nScore: {currentScore}";
+            }
+            else
+            {
+                finalScoreText.text = $"Score: {currentScore}";
+            }
         }
         else
         {
             Debug.LogError("GameOverPanel not assigned in inspector!");
         }
     }
+
+
 
     public void Retry()
     {
