@@ -15,4 +15,5 @@ MonoBehaviour:
   weaponName: Fireball
   icon: {fileID: 8985600147615596786, guid: d003c0414353b6f49aea6072c4a023f8, type: 3}
   prefab: {fileID: 3338798642609011754, guid: 52415773f549c604ba9dcc3fb4b6b7f7, type: 3}
-  description: Shoots 3 fireballs at a certain direction.
+  description: Shoots fireball/s at a certain direction.
+  level: 0

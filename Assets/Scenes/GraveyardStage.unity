@@ -4670,7 +4670,7 @@ Transform:
   m_GameObject: {fileID: 434375766}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.92, y: 0.16, z: 9.969989}
+  m_LocalPosition: {x: -10, y: 4, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4689,16 +4689,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
   - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 6982631311653688324, guid: 5fe0a7f28aedcff45880fac1647e0f3b, type: 3}
+  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
+  - {fileID: 5206230511083539426, guid: 12e1002095a4c2d4689ead933471a8f2, type: 3}
   spawnPoint: {fileID: 434375767}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 4768649162270386852, guid: 20a46131ead287a48afc3c4ce034d9ca, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 30
     endTime: 60
@@ -8194,7 +8193,7 @@ Transform:
   m_GameObject: {fileID: 838234506}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.74, y: -4.36, z: 9.969989}
+  m_LocalPosition: {x: -10, y: -4, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8213,9 +8212,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
   - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 6982631311653688324, guid: 5fe0a7f28aedcff45880fac1647e0f3b, type: 3}
+  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
+  - {fileID: 5206230511083539426, guid: 12e1002095a4c2d4689ead933471a8f2, type: 3}
   spawnPoint: {fileID: 838234507}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
@@ -8944,7 +8944,7 @@ Transform:
   m_GameObject: {fileID: 957762893}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.78, y: 0.16, z: 9.969989}
+  m_LocalPosition: {x: -10, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8963,9 +8963,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
   - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 6982631311653688324, guid: 5fe0a7f28aedcff45880fac1647e0f3b, type: 3}
+  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
+  - {fileID: 5206230511083539426, guid: 12e1002095a4c2d4689ead933471a8f2, type: 3}
   spawnPoint: {fileID: 957762894}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
@@ -10037,7 +10038,7 @@ Transform:
   m_GameObject: {fileID: 1094919311}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.92, y: -4.46, z: 9.969989}
+  m_LocalPosition: {x: 10, y: 4, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10056,9 +10057,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
   - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 6982631311653688324, guid: 5fe0a7f28aedcff45880fac1647e0f3b, type: 3}
+  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
+  - {fileID: 5206230511083539426, guid: 12e1002095a4c2d4689ead933471a8f2, type: 3}
   spawnPoint: {fileID: 1094919312}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
@@ -10791,7 +10793,7 @@ Transform:
   m_GameObject: {fileID: 1152211746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.92, y: 5.58, z: 9.969989}
+  m_LocalPosition: {x: 10, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10810,14 +10812,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
   - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 6982631311653688324, guid: 5fe0a7f28aedcff45880fac1647e0f3b, type: 3}
+  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
+  - {fileID: 5206230511083539426, guid: 12e1002095a4c2d4689ead933471a8f2, type: 3}
   spawnPoint: {fileID: 1152211747}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns: []
+  timedSpawns:
+  - triggerTime: 60
+    enemyPrefab: {fileID: 8348482093262291873, guid: c5743d9e9c9b985488f034dede14c20a, type: 3}
   spawnRanges:
   - startTime: 30
     endTime: 60
@@ -19113,7 +19118,7 @@ Transform:
   m_GameObject: {fileID: 1614613163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.83, y: 4.34, z: 9.969989}
+  m_LocalPosition: {x: 10, y: -4, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19132,9 +19137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultEnemies:
-  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
   - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
-  - {fileID: 1124773556547014201, guid: 65bff631e3844b046b16371758d7a7cf, type: 3}
+  - {fileID: 6982631311653688324, guid: 5fe0a7f28aedcff45880fac1647e0f3b, type: 3}
+  - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
+  - {fileID: 5206230511083539426, guid: 12e1002095a4c2d4689ead933471a8f2, type: 3}
   spawnPoint: {fileID: 1614613164}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
