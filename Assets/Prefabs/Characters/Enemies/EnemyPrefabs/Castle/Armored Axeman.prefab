@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -2840889677612922993, guid: 5e15a403c8eef464795a4bab7c530065, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.2, y: 0.22}
@@ -177,7 +177,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -250,6 +250,7 @@ MonoBehaviour:
   baseHealth: 10
   healthScalingFactor: 0.5
   scoreValue: 10
+  isBoss: 0
 --- !u!114 &-1883100786562533303
 MonoBehaviour:
   m_ObjectHideFlags: 0
