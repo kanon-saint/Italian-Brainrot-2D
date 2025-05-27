@@ -18,8 +18,8 @@ MonoBehaviour:
   characterDescription: He's a hybrid tree.
   maxHP: 120
   currentHP: 120
-  speed: 10
-  attackPower: 50
+  speed: 4
+  attackPower: 10
   characterPrefab: {fileID: 3857542695622619987, guid: 3220374bfeae9a54cb57c5232df0f2f0, type: 3}
   characterImage: {fileID: 4145336725180928263, guid: 31af3760e976ca344ada66a58ea2c28a, type: 3}
   characterPng: {fileID: -3794510061613224942, guid: baf27e947865b8e4aa6f8fbfbe3b5c16, type: 3}

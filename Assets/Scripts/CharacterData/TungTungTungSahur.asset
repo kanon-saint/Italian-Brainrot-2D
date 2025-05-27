@@ -18,8 +18,8 @@ MonoBehaviour:
   characterDescription: A hybrid humanoid
   maxHP: 100
   currentHP: 100
-  speed: 65
-  attackPower: 70
+  speed: 5
+  attackPower: 10
   characterPrefab: {fileID: 7586402160338637091, guid: cac5384007ade574c9cd29effebe1c6f, type: 3}
   characterImage: {fileID: -7652458606134618994, guid: 45e54de1841dcf341a217ce3b558c589, type: 3}
   characterPng: {fileID: -4946436189862115443, guid: b8da75c2cffed43498e6752c6eff70c9, type: 3}

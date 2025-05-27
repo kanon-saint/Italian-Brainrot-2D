@@ -2218,7 +2218,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 172079768}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
-  accelerationInterval: 30
+  accelerationInterval: 60
   timedSpawns: []
   spawnRanges:
   - startTime: 0
@@ -2244,8 +2244,8 @@ MonoBehaviour:
   - startTime: 60
     endTime: 3600
     enemyPrefabs:
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-    - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
 --- !u!1 &354359250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 354359251}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
-  accelerationInterval: 30
+  accelerationInterval: 60
   timedSpawns: []
   spawnRanges:
   - startTime: 0
@@ -2320,8 +2320,8 @@ MonoBehaviour:
   - startTime: 60
     endTime: 3600
     enemyPrefabs:
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-    - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,6 +2500,7 @@ MonoBehaviour:
   tileSize: 9
   viewRadius: 4
   maxTreesPerTile: 1
+  otherObjectTag: ExpOrb
 --- !u!1 &615306249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,7 +2592,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7411765, g: 0.9098039, b: 0.75686276, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -2690,7 +2691,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 684964760}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
-  accelerationInterval: 30
+  accelerationInterval: 60
   timedSpawns: []
   spawnRanges:
   - startTime: 0
@@ -2716,8 +2717,8 @@ MonoBehaviour:
   - startTime: 60
     endTime: 3600
     enemyPrefabs:
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-    - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
 --- !u!1 &801880132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,7 +2767,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 801880133}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
-  accelerationInterval: 30
+  accelerationInterval: 60
   timedSpawns: []
   spawnRanges:
   - startTime: 0
@@ -2792,8 +2793,8 @@ MonoBehaviour:
   - startTime: 60
     endTime: 3600
     enemyPrefabs:
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-    - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
 --- !u!1 &1107790824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,7 +2843,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1107790825}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
-  accelerationInterval: 30
+  accelerationInterval: 60
   timedSpawns:
   - triggerTime: 60
     enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
@@ -2870,8 +2871,8 @@ MonoBehaviour:
   - startTime: 60
     endTime: 3600
     enemyPrefabs:
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-    - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
 --- !u!1 &2008915772
 GameObject:
   m_ObjectHideFlags: 0
@@ -2920,7 +2921,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 2008915773}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
-  accelerationInterval: 30
+  accelerationInterval: 60
   timedSpawns: []
   spawnRanges:
   - startTime: 0
@@ -2946,8 +2947,8 @@ MonoBehaviour:
   - startTime: 60
     endTime: 3600
     enemyPrefabs:
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-    - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
 --- !u!114 &146624088821438716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8694270882998934603, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}

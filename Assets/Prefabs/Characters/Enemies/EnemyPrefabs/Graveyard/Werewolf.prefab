@@ -106,9 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1516a3fae18984d409086f05b671a899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 50
+  baseHealth: 25
   healthScalingFactor: 0
-  scoreValue: 10
+  scoreValue: 30
   isBoss: 0
 --- !u!50 &2448005600041682829
 Rigidbody2D:
