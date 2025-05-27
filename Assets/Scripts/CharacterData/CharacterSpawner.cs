@@ -3,31 +3,37 @@ using UnityEngine;
 public class CharacterSpawner : MonoBehaviour
 {
     [SerializeField] private Transform spawnPoint;
+
     public CharacterHUD hud;
 
-    void Start()
+    private void Start()
     {
         if (GameManager.Instance != null && GameManager.Instance.selectedCharacter != null)
         {
             CharacterData selectedData = GameManager.Instance.selectedCharacter;
-            GameManager.Instance.selectedCharacter.ResetHP();
-            GameManager.Instance.selectedCharacter.Heal(GameManager.Instance.selectedCharacter.maxHP);
 
-            // Instantiate the character prefab
+            selectedData.ResetHP();
+            selectedData.Heal(selectedData.maxHP);
+
             GameObject characterInstance = Instantiate(selectedData.characterPrefab, spawnPoint.position, Quaternion.identity);
 
-            // Try to get a health component if you have one (optional)
-            int currentHP = selectedData.maxHP; // Default to max HP
-            int maxHP = selectedData.maxHP;
-
-            // Initialize HUD
             if (hud != null)
             {
-                hud.InitializeHUD(selectedData.characterImage, currentHP, maxHP);
+                hud.InitializeHUD(selectedData.characterImage, selectedData.maxHP, selectedData.maxHP);
             }
             else
             {
                 Debug.LogWarning("CharacterHUD reference not set on CharacterSpawner.");
+            }
+
+            // Reference the WeaponManager function
+            if (WeaponManager.Instance != null)
+            {
+                WeaponManager.Instance.ResetAllWeaponLevels();
+            }
+            else
+            {
+                Debug.LogWarning("WeaponManager instance not found. Cannot reset weapon levels.");
             }
         }
         else

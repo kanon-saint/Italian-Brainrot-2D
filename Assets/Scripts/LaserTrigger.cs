@@ -16,12 +16,15 @@ public class LaserTrigger : MonoBehaviour
     [SerializeField] private float durationPerLevel = 0.2f;
     [SerializeField] private float cooldownReductionPerLevel = 0.1f;
 
+    [Header("Audio Effects")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip laserSound;
+
     private Collider2D laserCollider;
     private SpriteRenderer laserRenderer;
 
     // Dynamic Properties
     private int Level => Mathf.Max(1, weaponData != null ? weaponData.level : 1);
-
     private int LaserDamage => baseLaserDamage + (Level - 1) * damagePerLevel;
     private float LaserDuration => baseLaserDuration + (Level - 1) * durationPerLevel;
     private float LaserCooldown => Mathf.Max(0.5f, baseLaserCooldown - (Level - 1) * cooldownReductionPerLevel);
@@ -55,6 +58,8 @@ public class LaserTrigger : MonoBehaviour
     {
         while (true)
         {
+            PlayLaserSound();
+
             laserCollider.enabled = true;
             if (laserRenderer != null) laserRenderer.enabled = true;
 
@@ -64,6 +69,15 @@ public class LaserTrigger : MonoBehaviour
             if (laserRenderer != null) laserRenderer.enabled = false;
 
             yield return new WaitForSeconds(LaserCooldown);
+        }
+    }
+
+    private void PlayLaserSound()
+    {
+        if (audioSource != null && laserSound != null)
+        {
+            audioSource.clip = laserSound;
+            audioSource.Play();
         }
     }
 }
