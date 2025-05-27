@@ -37,6 +37,11 @@ public class LaserTrigger : MonoBehaviour
 
         int level = weaponData.level;
 
+        // Start from base values
+        laserDamage = baseLaserDamage;
+        laserDuration = baseLaserDuration;
+        laserCooldown = baseLaserCooldown;
+
         // You can fine-tune these values per level
         switch (level)
         {
@@ -61,9 +66,13 @@ public class LaserTrigger : MonoBehaviour
                 laserCooldown = laserCooldown - 0.5f;
                 break;
             default:
-                laserDamage = laserDamage + 2;
-                laserDuration = laserDuration;
-                laserCooldown = laserCooldown;
+                if (level > 4)
+                {
+                    laserDamage += 2;
+                    // Optionally scale further with level
+                    laserDuration += (level - 4) * 0.25f;
+                    laserCooldown -= (level - 4) * 0.1f;
+                }
                 break;
         }
 
