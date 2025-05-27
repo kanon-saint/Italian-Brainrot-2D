@@ -48,5 +48,5 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1171729566265750509, guid: f6fb17b0d8ec3e346a13093e1f24d40c, type: 3}
   bulletSpeed: 20
   bulletInterval: 0.1
-  attackCooldown: 3
+  attackCooldown: 1
   bulletMaxDistance: 15
