@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1283450021884629327}
   - component: {fileID: 8388626365667670198}
   - component: {fileID: 411031716889003027}
+  - component: {fileID: 2521392289262707197}
   m_Layer: 0
   m_Name: Armi Black png_6
   m_TagString: Untagged
@@ -172,7 +173,21 @@ MonoBehaviour:
   orbitSpeed: 180
   selfSpinSpeed: 360
   axePrefab: {fileID: 7321375746978530054}
+  orbitingAxes: []
 --- !u!114 &411031716889003027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321375746978530054}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3328d8a7d293b0a499d3cfe456f46929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+--- !u!114 &2521392289262707197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,7 +196,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7321375746978530054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3328d8a7d293b0a499d3cfe456f46929, type: 3}
+  m_Script: {fileID: 11500000, guid: b301e3bfe1ac6d0489d5f97b793c0fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
+  weaponData: {fileID: 11400000, guid: 41573b86ea3c8264abb62555513262d4, type: 2}
