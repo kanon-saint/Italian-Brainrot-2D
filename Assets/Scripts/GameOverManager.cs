@@ -65,13 +65,14 @@ public class GameOverManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         ResetWeapons();
+        ScoreManager.Instance?.ResetScore();
 
         if (GameManager.Instance?.selectedCharacter != null)
         {
             GameManager.Instance.selectedCharacter.ResetHP();
         }
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("ForestStage");
     }
 
     public void GoToCharacterSelection()

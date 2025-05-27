@@ -198,13 +198,28 @@ public class WeaponManager : MonoBehaviour
     {
         foreach (var weapon in allWeapons)
         {
-            if (weapon != null)
+            if (weapon == null) continue;
+
+            string wName = weapon.weaponName.ToLower();
+
+            // Core weapons always reset to level 0
+            if (wName == "axe" || wName == "fireball" || wName == "laser" || wName == "death zone")
             {
                 weapon.level = 0;
             }
+            // Conditional weapons reset to level 1 based on player
+            else if (wName == "club" || wName == "bite" || wName == "thorn")
+            {
+                weapon.level = 1;
+            }
+            else
+            {
+                weapon.level = 0; // All other weapons default to level 0
+            }
         }
 
-        Debug.Log("All weapon levels have been reset to 0.");
+        Debug.Log("Weapon levels have been reset based on player character.");
     }
+
 
 }

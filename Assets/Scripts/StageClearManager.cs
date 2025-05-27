@@ -30,14 +30,15 @@ public class StageClearManager : MonoBehaviour
             Time.timeScale = 0f;
         }
 
-        // Proceed to next scene after a short delay
+        // Proceed to next scene after a short delay (in real time)
         StartCoroutine(ProceedToNextSceneAfterDelay());
     }
 
     private IEnumerator ProceedToNextSceneAfterDelay()
     {
-        Time.timeScale = 1f;
-        yield return new WaitForSeconds(delayBeforeNextScene);
+        yield return new WaitForSecondsRealtime(delayBeforeNextScene); // Use real time while paused
+
+        Time.timeScale = 1f; // Resume time *after* the delay
 
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
@@ -50,4 +51,5 @@ public class StageClearManager : MonoBehaviour
             Debug.Log("No more scenes. Game complete!");
         }
     }
+
 }
