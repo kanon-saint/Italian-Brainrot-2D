@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 8de147a7b42309b4880f6314ea2dc13f, type: 2}
   baseDamage: 10
-  damagePerLevel: 1
+  damagePerLevel: 5
 --- !u!210 &7095664928643201706
 SortingGroup:
   m_ObjectHideFlags: 0
