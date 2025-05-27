@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ProjectileAttackManager : MonoBehaviour
 {
+    [Header("Attack Settings")]
     [SerializeField] private GameObject defaultAttackPfx;
     [SerializeField] private float attackDuration = 0.25f;
     [SerializeField] private float attackCooldown = 1f;
