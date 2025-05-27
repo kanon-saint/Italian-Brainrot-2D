@@ -2170,6 +2170,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!82 &92393100 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1633550676308229221, guid: fe27822dad265b744b6215e0f5873eb8, type: 3}
+  m_PrefabInstance: {fileID: 6527246701637357611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &172079767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,6 +2251,7 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  maxEnemies: 5
 --- !u!1 &354359250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,6 +2328,7 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  maxEnemies: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,6 +2726,7 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  maxEnemies: 5
 --- !u!1 &801880132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,6 +2803,7 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  maxEnemies: 5
 --- !u!1 &1107790824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2873,6 +2882,7 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  maxEnemies: 5
 --- !u!1 &2008915772
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,6 +2959,7 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+  maxEnemies: 5
 --- !u!114 &146624088821438716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8694270882998934603, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
@@ -3971,13 +3982,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 980165665405981169, guid: 8f0f66333b0901a4f977ecf7716982e9, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 92393100}
+    - target: {fileID: 980165665405981169, guid: 8f0f66333b0901a4f977ecf7716982e9, type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 6863853899166543318}
     - target: {fileID: 980165665405981169, guid: 8f0f66333b0901a4f977ecf7716982e9, type: 3}
+      propertyPath: gameOverSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 74b3ea4521ab1b54fa0b2453cd322a3d, type: 3}
+    - target: {fileID: 980165665405981169, guid: 8f0f66333b0901a4f977ecf7716982e9, type: 3}
       propertyPath: finalScoreText
       value: 
       objectReference: {fileID: 9023134272456151196}
+    - target: {fileID: 980165665405981169, guid: 8f0f66333b0901a4f977ecf7716982e9, type: 3}
+      propertyPath: buttonClickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a6383d4703ee20c4b9f5eba1a09a2194, type: 3}
     - target: {fileID: 3364060005454208269, guid: 8f0f66333b0901a4f977ecf7716982e9, type: 3}
       propertyPath: m_Name
       value: GameOverManager

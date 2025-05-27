@@ -9,6 +9,11 @@ public class GameOverManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI finalScoreText;
 
+    [Header("Audio Effects")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip gameOverSound;
+    [SerializeField] private AudioClip buttonClickSound;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -24,7 +29,6 @@ public class GameOverManager : MonoBehaviour
 
     private void Start()
     {
-        // Check if no character selected at start, then game over immediately
         if (GameManager.Instance?.selectedCharacter == null)
         {
             Debug.LogWarning("No character selected! Triggering game over.");
@@ -52,6 +56,8 @@ public class GameOverManager : MonoBehaviour
             {
                 finalScoreText.text = $"Score: {currentScore}";
             }
+
+            PlayGameOverSound();
         }
         else
         {
@@ -60,9 +66,10 @@ public class GameOverManager : MonoBehaviour
     }
 
 
-
     public void Retry()
     {
+        PlaySound(buttonClickSound);
+
         Time.timeScale = 1f;
         ResetWeapons();
         ScoreManager.Instance?.ResetScore();
@@ -77,6 +84,8 @@ public class GameOverManager : MonoBehaviour
 
     public void GoToCharacterSelection()
     {
+        PlaySound(buttonClickSound);
+
         Time.timeScale = 1f;
         ResetWeapons();
 
@@ -90,6 +99,8 @@ public class GameOverManager : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        PlaySound(buttonClickSound);
+
         Time.timeScale = 1f;
         ResetWeapons();
 
@@ -110,6 +121,25 @@ public class GameOverManager : MonoBehaviour
         else
         {
             Debug.LogWarning("WeaponManager instance not found!");
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
+    private void PlayGameOverSound()
+    {
+        if (audioSource != null && gameOverSound != null)
+        {
+            audioSource.Stop(); // Stops ongoing music or SFX
+            audioSource.clip = gameOverSound;
+            audioSource.loop = false; // optional, depending on clip type
+            audioSource.Play();
         }
     }
 
