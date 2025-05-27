@@ -43,6 +43,7 @@ public class CharacterHUD : MonoBehaviour
     {
         ResetExperience();
         UpdateUI();
+        Time.timeScale = 1f;
     }
 
     private void Update()
