@@ -13021,6 +13021,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 29db4e7033b061440a9959bb2fa455d7, type: 2}
   - {fileID: 11400000, guid: 766f107feece7ae48b09a3232d0f385a, type: 2}
   - {fileID: 11400000, guid: 328b2600c889ee949a9a4a524d53f06f, type: 2}
+  - {fileID: 11400000, guid: 8de147a7b42309b4880f6314ea2dc13f, type: 2}
+  - {fileID: 11400000, guid: cc9f8a17d23612d46a430b377530d644, type: 2}
+  - {fileID: 11400000, guid: 9f74aa87efa471344aadd7e492ba9090, type: 2}
   powerUpPanel: {fileID: 410358030}
   weaponButtons:
   - {fileID: 1977225513}

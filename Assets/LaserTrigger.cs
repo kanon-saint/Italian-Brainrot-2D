@@ -4,22 +4,27 @@ using System.Collections;
 public class LaserTrigger : MonoBehaviour
 {
     [SerializeField] private WeaponData weaponData;
+
+    [Header("Base Stats")]
     [SerializeField] private int baseLaserDamage;
     [SerializeField] private float baseLaserDuration;
     [SerializeField] private float baseLaserCooldown;
     [SerializeField] private Vector3 positionOffset;
 
-    // How much each level improves the laser
-    [SerializeField] private int damagePerLevel = 1;
+    [Header("Level Scaling")]
+    [SerializeField] private int damagePerLevel = 2;
     [SerializeField] private float durationPerLevel = 0.2f;
     [SerializeField] private float cooldownReductionPerLevel = 0.1f;
 
     private Collider2D laserCollider;
     private SpriteRenderer laserRenderer;
 
-    private int laserDamage;
-    private float laserDuration;
-    private float laserCooldown;
+    // Dynamic Properties
+    private int Level => Mathf.Max(1, weaponData != null ? weaponData.level : 1);
+
+    private int LaserDamage => baseLaserDamage + (Level - 1) * damagePerLevel;
+    private float LaserDuration => baseLaserDuration + (Level - 1) * durationPerLevel;
+    private float LaserCooldown => Mathf.Max(0.5f, baseLaserCooldown - (Level - 1) * cooldownReductionPerLevel);
 
     private void Start()
     {
@@ -28,27 +33,9 @@ public class LaserTrigger : MonoBehaviour
         laserCollider = GetComponent<Collider2D>();
         laserRenderer = GetComponent<SpriteRenderer>();
 
-        ApplyWeaponLevelBehavior();
+        Debug.Log($"[LaserTrigger] Initialized at Level {Level} with Damage {LaserDamage}, Duration {LaserDuration}, Cooldown {LaserCooldown}");
+
         StartCoroutine(LaserCycle());
-    }
-
-    private void ApplyWeaponLevelBehavior()
-    {
-        if (weaponData == null)
-        {
-            Debug.LogWarning("WeaponData is not assigned to LaserTrigger.");
-            return;
-        }
-
-        int level = Mathf.Max(1, weaponData.level); // Ensure level is at least 1
-
-        // Apply scalable improvements
-        laserDamage = baseLaserDamage + (level - 1) * damagePerLevel;
-        laserDuration = baseLaserDuration + (level - 1) * durationPerLevel;
-        laserCooldown = baseLaserCooldown - (level - 1) * cooldownReductionPerLevel;
-
-        // Clamp cooldown to a safe minimum
-        laserCooldown = Mathf.Max(0.5f, laserCooldown);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -58,7 +45,8 @@ public class LaserTrigger : MonoBehaviour
             CharacterAttributes enemyAttributes = other.GetComponent<CharacterAttributes>();
             if (enemyAttributes != null)
             {
-                enemyAttributes.TakeDamage(laserDamage);
+                enemyAttributes.TakeDamage(LaserDamage);
+                Debug.Log($"Laser hit enemy with damage: {LaserDamage}");
             }
         }
     }
@@ -70,12 +58,12 @@ public class LaserTrigger : MonoBehaviour
             laserCollider.enabled = true;
             if (laserRenderer != null) laserRenderer.enabled = true;
 
-            yield return new WaitForSeconds(laserDuration);
+            yield return new WaitForSeconds(LaserDuration);
 
             laserCollider.enabled = false;
             if (laserRenderer != null) laserRenderer.enabled = false;
 
-            yield return new WaitForSeconds(laserCooldown);
+            yield return new WaitForSeconds(LaserCooldown);
         }
     }
 }

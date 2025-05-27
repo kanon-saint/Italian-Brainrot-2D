@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3378fef4c203fd54292d62f16b677c58, type: 3}
-  m_Name: Axe
+  m_Name: Club
   m_EditorClassIdentifier: 
-  weaponName: Axe
-  icon: {fileID: 1209845062947907247, guid: 2e0f779a5fe657246acc6ea6b07536eb, type: 3}
-  prefab: {fileID: 7321375746978530054, guid: 4d0fc7b010b7b4447874148b42a39d9d, type: 3}
-  description: Add a swirling axe around your brainrot.
+  weaponName: Club
+  icon: {fileID: 21300000, guid: a1ff8d71f6d1a4809b4e35fac8d4a7df, type: 3}
+  prefab: {fileID: 5503505460791601945, guid: 74c549d1b06b6b140a1fd9536eea637f, type: 3}
+  description: Tung Tung Sahur's basic attack.
   level: 0
