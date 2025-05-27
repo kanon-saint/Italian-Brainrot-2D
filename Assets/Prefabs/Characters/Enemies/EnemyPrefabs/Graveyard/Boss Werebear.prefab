@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 4594457569937490627}
   - component: {fileID: 8247854453187146397}
   m_Layer: 0
-  m_Name: Werebear
+  m_Name: Boss Werebear
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
