@@ -67646,17 +67646,20 @@ MonoBehaviour:
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
     - {fileID: 6220128515382634732, guid: 9269f1960505e1a448cf0b175afbc5ac, type: 3}
   - startTime: 15
-    endTime: 60
+    endTime: 30
     enemyPrefabs:
     - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
     - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
+  - startTime: 30
+    endTime: 45
+    enemyPrefabs:
+    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-  - startTime: 60
+  - startTime: 45
     endTime: 3600
     enemyPrefabs:
-    - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
+    - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
   groundTilemap: {fileID: 191607672}
 --- !u!1001 &223138182
 PrefabInstance:
@@ -80803,17 +80806,20 @@ MonoBehaviour:
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
     - {fileID: 6220128515382634732, guid: 9269f1960505e1a448cf0b175afbc5ac, type: 3}
   - startTime: 15
-    endTime: 60
+    endTime: 30
     enemyPrefabs:
     - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
     - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
+  - startTime: 30
+    endTime: 45
+    enemyPrefabs:
+    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-  - startTime: 60
+  - startTime: 45
     endTime: 3600
     enemyPrefabs:
-    - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
+    - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
   groundTilemap: {fileID: 191607672}
 --- !u!1001 &597515896
 PrefabInstance:
@@ -83779,17 +83785,20 @@ MonoBehaviour:
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
     - {fileID: 6220128515382634732, guid: 9269f1960505e1a448cf0b175afbc5ac, type: 3}
   - startTime: 15
-    endTime: 60
+    endTime: 30
     enemyPrefabs:
     - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
     - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
+  - startTime: 30
+    endTime: 45
+    enemyPrefabs:
+    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-  - startTime: 60
+  - startTime: 45
     endTime: 3600
     enemyPrefabs:
-    - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
+    - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
   groundTilemap: {fileID: 191607672}
 --- !u!1001 &1506620362
 PrefabInstance:
@@ -84344,17 +84353,20 @@ MonoBehaviour:
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
     - {fileID: 6220128515382634732, guid: 9269f1960505e1a448cf0b175afbc5ac, type: 3}
   - startTime: 15
-    endTime: 60
+    endTime: 30
     enemyPrefabs:
     - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
     - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
+  - startTime: 30
+    endTime: 45
+    enemyPrefabs:
+    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-  - startTime: 60
+  - startTime: 45
     endTime: 3600
     enemyPrefabs:
-    - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
+    - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
   groundTilemap: {fileID: 191607672}
 --- !u!1001 &1660217672
 PrefabInstance:
@@ -84475,17 +84487,20 @@ MonoBehaviour:
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
     - {fileID: 6220128515382634732, guid: 9269f1960505e1a448cf0b175afbc5ac, type: 3}
   - startTime: 15
-    endTime: 60
+    endTime: 30
     enemyPrefabs:
     - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
     - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
+  - startTime: 30
+    endTime: 45
+    enemyPrefabs:
+    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-  - startTime: 60
+  - startTime: 45
     endTime: 3600
     enemyPrefabs:
-    - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
+    - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
   groundTilemap: {fileID: 191607672}
 --- !u!1001 &1708417506
 PrefabInstance:
@@ -85660,17 +85675,20 @@ MonoBehaviour:
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
     - {fileID: 6220128515382634732, guid: 9269f1960505e1a448cf0b175afbc5ac, type: 3}
   - startTime: 15
-    endTime: 60
+    endTime: 30
     enemyPrefabs:
     - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
     - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
+  - startTime: 30
+    endTime: 45
+    enemyPrefabs:
+    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-  - startTime: 60
+  - startTime: 45
     endTime: 3600
     enemyPrefabs:
-    - {fileID: 2840319622266677039, guid: e605238b1e3220d4b8584e705f003a22, type: 3}
     - {fileID: 3320639384327205884, guid: a8fb87a73a9023049aece63f1cddb81c, type: 3}
-    - {fileID: 4314014581109739535, guid: 1a1650ac6538c8d4ab11c816b4de41c2, type: 3}
+    - {fileID: 3934999128737224948, guid: 65336e26c98b6f64d9b417a147300828, type: 3}
   groundTilemap: {fileID: 191607672}
 --- !u!1001 &2014427988
 PrefabInstance:
