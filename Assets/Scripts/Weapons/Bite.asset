@@ -16,4 +16,4 @@ MonoBehaviour:
   icon: {fileID: -4509359564991771626, guid: 394fa94e86e0834499a78e643d0512b8, type: 3}
   prefab: {fileID: 1400255665468144947, guid: 6c21e7a6e514dd9499418cbbb66211cf, type: 3}
   description: Tralalero Tralala's basic attack.
-  level: 0
+  level: 1
