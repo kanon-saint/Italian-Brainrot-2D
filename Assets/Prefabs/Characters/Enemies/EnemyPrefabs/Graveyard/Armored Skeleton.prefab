@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77fdc501858a63469f8dca15a425609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
+  moveSpeed: 1
   animator: {fileID: 3536708035738099519}
 --- !u!114 &8983276050931158093
 MonoBehaviour:
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 20
   healthScalingFactor: 0
-  scoreValue: 5
+  scoreValue: 10
   isBoss: 0
 --- !u!50 &5336069710012065651
 Rigidbody2D:

@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 30
   healthScalingFactor: 0
-  scoreValue: 10
+  scoreValue: 20
   isBoss: 0
 --- !u!50 &1924658505510694906
 Rigidbody2D:
