@@ -33,7 +33,7 @@ public class AttackPerSecond : MonoBehaviour
         // More controlled damage scaling
         switch (level)
         {
-            default:
+            case 1:
                 currentDamagePerSecond = baseDamagePerSecond;
                 break;
             case 2:
@@ -47,6 +47,12 @@ public class AttackPerSecond : MonoBehaviour
                 break;
             case 5:
                 currentDamagePerSecond = baseDamagePerSecond * 5; // 50
+                break;
+            default:
+                if (level > 4)
+                {
+                    currentDamagePerSecond = baseDamagePerSecond + 2;
+                }
                 break;
             // Add more levels if needed
         }
