@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterImageUI: {fileID: 7310955531185704097}
+  clickSound: {fileID: 8300000, guid: fe0afc75fc385404fa624ef7cd0ab0ff, type: 3}
