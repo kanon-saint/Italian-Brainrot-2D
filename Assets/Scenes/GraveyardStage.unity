@@ -10367,9 +10367,7 @@ MonoBehaviour:
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 8348482093262291873, guid: c5743d9e9c9b985488f034dede14c20a, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 0
     endTime: 15
