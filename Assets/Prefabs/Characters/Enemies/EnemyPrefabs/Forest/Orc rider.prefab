@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1516a3fae18984d409086f05b671a899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 25
+  baseHealth: 20
   healthScalingFactor: 0
   scoreValue: 20
   isBoss: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77fdc501858a63469f8dca15a425609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.5
+  moveSpeed: 3
   animator: {fileID: 2864441983635066728}
 --- !u!114 &1853131806748985731
 MonoBehaviour:
@@ -215,8 +215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fa6ceccff42b54bb8cac75457aa0a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  damageCooldown: 0.5
+  damage: 15
+  damageCooldown: 1
   animator: {fileID: 2864441983635066728}
 --- !u!114 &4172148126022393851
 MonoBehaviour:
