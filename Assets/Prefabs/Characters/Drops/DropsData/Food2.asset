@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6125657231354811564, guid: 526d3c7be6af65740aba86b43d0c72fb, type: 3}
   healValue: 10
-  dropChance: 0.007
+  dropChance: 0.1

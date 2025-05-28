@@ -67640,6 +67640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 10
   defaultEnemies: []
   spawnPoint: {fileID: 218319668}
   spawnIntervalRange: {x: 2, y: 4}
@@ -80803,6 +80804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 10
   defaultEnemies: []
   spawnPoint: {fileID: 582058069}
   spawnIntervalRange: {x: 2, y: 4}
@@ -84035,6 +84037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 10
   defaultEnemies: []
   spawnPoint: {fileID: 1501395508}
   spawnIntervalRange: {x: 2, y: 4}
@@ -84605,6 +84608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 10
   defaultEnemies: []
   spawnPoint: {fileID: 1621975631}
   spawnIntervalRange: {x: 2, y: 4}
@@ -84741,6 +84745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 10
   defaultEnemies: []
   spawnPoint: {fileID: 1660550451}
   spawnIntervalRange: {x: 2, y: 4}
@@ -85937,6 +85942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 10
   defaultEnemies: []
   spawnPoint: {fileID: 2011232188}
   spawnIntervalRange: {x: 2, y: 4}

@@ -96,7 +96,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f16334ee843acb43b9531ee467669b8, type: 2}
   - {fileID: 11400000, guid: 05de413a592cc3344896e8d4807c52cf, type: 2}
   - {fileID: 11400000, guid: 5862810d653e767409a4040de961d5a2, type: 2}
-  foodDropChance: 0.01
+  foodDropChance: 0.15
 --- !u!114 &3442996417403805911
 MonoBehaviour:
   m_ObjectHideFlags: 0

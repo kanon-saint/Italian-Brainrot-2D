@@ -4273,6 +4273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 4
   defaultEnemies: []
   spawnPoint: {fileID: 434375767}
   spawnIntervalRange: {x: 2, y: 4}
@@ -4710,6 +4711,84 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20abf8cdeba283346b771ce084d63167, type: 3}
+--- !u!1 &471548146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471548147}
+  - component: {fileID: 471548148}
+  m_Layer: 0
+  m_Name: BossSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471548147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471548146}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 518520541}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &471548148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471548146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemies: 5
+  defaultEnemies: []
+  spawnPoint: {fileID: 471548147}
+  spawnIntervalRange: {x: 2, y: 4}
+  spawnAccelerationRate: 0.2
+  accelerationInterval: 30
+  timedSpawns:
+  - triggerTime: 60
+    enemyPrefab: {fileID: 8348482093262291873, guid: c5743d9e9c9b985488f034dede14c20a, type: 3}
+  - triggerTime: 120
+    enemyPrefab: {fileID: 8348482093262291873, guid: c5743d9e9c9b985488f034dede14c20a, type: 3}
+  - triggerTime: 180
+    enemyPrefab: {fileID: 8348482093262291873, guid: c5743d9e9c9b985488f034dede14c20a, type: 3}
+  spawnRanges:
+  - startTime: 0
+    endTime: 15
+    enemyPrefabs:
+    - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
+  - startTime: 15
+    endTime: 30
+    enemyPrefabs:
+    - {fileID: 7693513180455166072, guid: db88e26609b9b4744824ef1091ff841e, type: 3}
+    - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
+  - startTime: 30
+    endTime: 40
+    enemyPrefabs:
+    - {fileID: 6982631311653688324, guid: 5fe0a7f28aedcff45880fac1647e0f3b, type: 3}
+    - {fileID: 5206230511083539426, guid: 12e1002095a4c2d4689ead933471a8f2, type: 3}
+  - startTime: 40
+    endTime: 3600
+    enemyPrefabs:
+    - {fileID: 5955268103563661217, guid: a387a8ee436c600439642d28dad24fb4, type: 3}
+    - {fileID: 5206230511083539426, guid: 12e1002095a4c2d4689ead933471a8f2, type: 3}
+  groundTilemap: {fileID: 1647989709}
 --- !u!1001 &472614795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5088,6 +5167,7 @@ Transform:
   - {fileID: 1094919312}
   - {fileID: 1152211747}
   - {fileID: 1614613164}
+  - {fileID: 471548147}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &518520542
@@ -7732,6 +7812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 4
   defaultEnemies: []
   spawnPoint: {fileID: 838234507}
   spawnIntervalRange: {x: 2, y: 4}
@@ -8487,18 +8568,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 4
   defaultEnemies: []
   spawnPoint: {fileID: 957762894}
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 30
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 8348482093262291873, guid: c5743d9e9c9b985488f034dede14c20a, type: 3}
-  - triggerTime: 120
-    enemyPrefab: {fileID: 8348482093262291873, guid: c5743d9e9c9b985488f034dede14c20a, type: 3}
-  - triggerTime: 180
-    enemyPrefab: {fileID: 8348482093262291873, guid: c5743d9e9c9b985488f034dede14c20a, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 0
     endTime: 15
@@ -9595,6 +9671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 4
   defaultEnemies: []
   spawnPoint: {fileID: 1094919312}
   spawnIntervalRange: {x: 2, y: 4}
@@ -10362,6 +10439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 4
   defaultEnemies: []
   spawnPoint: {fileID: 1152211747}
   spawnIntervalRange: {x: 2, y: 4}
@@ -18423,6 +18501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ca2df40e1e942409b8c21f0cd728e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 4
   defaultEnemies: []
   spawnPoint: {fileID: 1614613164}
   spawnIntervalRange: {x: 2, y: 4}
