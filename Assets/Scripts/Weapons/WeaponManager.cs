@@ -42,7 +42,7 @@ public class WeaponManager : MonoBehaviour
             return;
         }
         Instance = this;
-        
+
     }
 
 

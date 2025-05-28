@@ -31,7 +31,26 @@ public class LaserTrigger : MonoBehaviour
 
     private void Start()
     {
-        transform.position += positionOffset;
+        // Find the player GameObject by tag
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("[LaserTrigger] Player object not found!");
+            return;
+        }
+
+        // Determine if player is facing left (negative scale.x)
+        bool isFacingLeft = player.transform.localScale.x < 0f;
+
+        // Apply offset and rotation based on facing direction
+        Vector3 adjustedOffset = positionOffset;
+        if (isFacingLeft)
+        {
+            adjustedOffset.x *= -1f;
+            transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+        }
+
+        transform.position = player.transform.position + adjustedOffset;
 
         laserCollider = GetComponent<Collider2D>();
         laserRenderer = GetComponent<SpriteRenderer>();
@@ -40,6 +59,8 @@ public class LaserTrigger : MonoBehaviour
 
         StartCoroutine(LaserCycle());
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
