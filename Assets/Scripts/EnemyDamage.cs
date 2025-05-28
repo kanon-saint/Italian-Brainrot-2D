@@ -10,6 +10,15 @@ public class EnemyDamage : MonoBehaviour
     // Store last damage time *per player* (if multiplayer) or just once for player here
     private float lastDamageTime = -Mathf.Infinity;
 
+    void Start()
+    {
+        Animator animator = GetComponentInChildren<Animator>();
+        if (animator != null)
+        {
+            animator.Play("Idle");
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         TryDamage(other);
@@ -36,6 +45,13 @@ public class EnemyDamage : MonoBehaviour
 
                 Debug.Log($"Player damaged by {gameObject.name}. Current HP: {character.currentHP}");
 
+                // Trigger hurt animation on player
+                Animator playerAnimator = other.GetComponentInChildren<Animator>();
+                if (playerAnimator != null)
+                {
+                     playerAnimator.Play("Hurt");
+                }
+
                 if (character.currentHP <= 0)
                 {
                     GameOverManager.Instance.TriggerGameOver();
@@ -43,6 +59,7 @@ public class EnemyDamage : MonoBehaviour
 
                 lastDamageTime = Time.time;
 
+                // Optional: play enemy attack animation
                 if (animator != null)
                 {
                     animator.SetTrigger("Attack");
@@ -50,4 +67,5 @@ public class EnemyDamage : MonoBehaviour
             }
         }
     }
+
 }
