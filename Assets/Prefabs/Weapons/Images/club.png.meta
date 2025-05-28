@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dab9a36ab008af94094f2cb12a93f1d1
+guid: 20686fb2bb88f9c41a93cdb10fb30f44
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2852610726315664299
-    second: club_0
+      213: 1162724827383932812
+    second: club 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: club_0
+      name: club 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba3a3808752869720800000000000000
-      internalID: 2852610726315664299
+      spriteID: c872fb3f114d22010800000000000000
+      internalID: 1162724827383932812
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      club_0: 2852610726315664299
+      club 1_0: 1162724827383932812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
