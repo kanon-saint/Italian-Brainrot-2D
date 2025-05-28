@@ -2219,6 +2219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 5
   defaultEnemies: []
   spawnPoint: {fileID: 172079768}
   spawnIntervalRange: {x: 2, y: 4}
@@ -2251,7 +2252,6 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-  maxEnemies: 5
 --- !u!1 &354359250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,6 +2296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 5
   defaultEnemies: []
   spawnPoint: {fileID: 354359251}
   spawnIntervalRange: {x: 2, y: 4}
@@ -2328,7 +2329,6 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-  maxEnemies: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,6 +2694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 5
   defaultEnemies: []
   spawnPoint: {fileID: 684964760}
   spawnIntervalRange: {x: 2, y: 4}
@@ -2726,7 +2727,6 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-  maxEnemies: 5
 --- !u!1 &801880132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,6 +2771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 5
   defaultEnemies: []
   spawnPoint: {fileID: 801880133}
   spawnIntervalRange: {x: 2, y: 4}
@@ -2803,7 +2804,6 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-  maxEnemies: 5
 --- !u!1 &1107790824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,6 +2848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 5
   defaultEnemies: []
   spawnPoint: {fileID: 1107790825}
   spawnIntervalRange: {x: 2, y: 4}
@@ -2882,7 +2883,106 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-  maxEnemies: 5
+--- !u!1 &1230912465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1230912466}
+  - component: {fileID: 1230912469}
+  - component: {fileID: 1230912468}
+  - component: {fileID: 1230912467}
+  m_Layer: 5
+  m_Name: WeaponsPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1230912466
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230912465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4943483237449082724}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -227.53003, y: 162.22697}
+  m_SizeDelta: {x: -589.35, y: -405.662}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1230912467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230912465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 15
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 15
+  m_ChildAlignment: 3
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 20, y: 20}
+  m_Spacing: {x: 20, y: 0}
+  m_Constraint: 1
+  m_ConstraintCount: 5
+--- !u!114 &1230912468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230912465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1230912469
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230912465}
+  m_CullTransparentMesh: 1
 --- !u!1 &2008915772
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,6 +3027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnemies: 5
   defaultEnemies: []
   spawnPoint: {fileID: 2008915773}
   spawnIntervalRange: {x: 2, y: 4}
@@ -2959,7 +3060,6 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
     - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
-  maxEnemies: 5
 --- !u!114 &146624088821438716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8694270882998934603, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
@@ -3556,6 +3656,9 @@ PrefabInstance:
     - {fileID: 7529210831279162388, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
     - {fileID: 3148886106977454200, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7709888055575070556, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1230912466}
     - targetCorrespondingSourceObject: {fileID: 7865624578343849603, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 704908123841778601}
@@ -3572,6 +3675,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf7402bc094bca4599e8e6651039a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &4943483237449082724 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7709888055575070556, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
+  m_PrefabInstance: {fileID: 4943483237449082722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5022628545312869255 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7935881993559670120, guid: 3ec884b50edf68c45abff2ad162aa9b4, type: 3}
@@ -3842,6 +3950,14 @@ PrefabInstance:
       propertyPath: powerUpPanel
       value: 
       objectReference: {fileID: 3325845431382021847}
+    - target: {fileID: 7038871655204034951, guid: 872b2e14f4d5c7146978a699a617bb04, type: 3}
+      propertyPath: equippedWeaponsPanel
+      value: 
+      objectReference: {fileID: 1230912466}
+    - target: {fileID: 7038871655204034951, guid: 872b2e14f4d5c7146978a699a617bb04, type: 3}
+      propertyPath: equippedWeaponItemPrefab
+      value: 
+      objectReference: {fileID: 7697759904238472308, guid: 829aead5d3557174c819f2620efd82d3, type: 3}
     - target: {fileID: 7038871655204034951, guid: 872b2e14f4d5c7146978a699a617bb04, type: 3}
       propertyPath: weaponButtons.Array.size
       value: 3
