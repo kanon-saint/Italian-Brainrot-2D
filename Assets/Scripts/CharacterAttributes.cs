@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CharacterAttributes : MonoBehaviour
@@ -9,14 +10,14 @@ public class CharacterAttributes : MonoBehaviour
     [Header("Score")]
     [SerializeField] private int scoreValue = 10;
     [SerializeField] private bool isBoss = false;
-    [SerializeField] private Animator animator;
+    private Animator animator;
 
     private int health;
     private bool isDead = false;
 
     private void Start()
     {
-        animator = GetComponent<Animator>(); // Cache Animator
+        animator = GetComponentInChildren<Animator>();
 
         // Scale health based on time since level started
         float elapsedTime = Time.time;
@@ -35,12 +36,6 @@ public class CharacterAttributes : MonoBehaviour
             // Add score
             ScoreManager.Instance?.AddScore(scoreValue);
 
-            // Play death animation
-            if (animator != null)
-            {
-                animator.SetTrigger("Die");
-            }
-
             if (isBoss)
             {
                 StageClearManager.Instance?.TriggerStageClear();
@@ -53,10 +48,16 @@ public class CharacterAttributes : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        StartCoroutine(PlayHurtThenWalk());
+    }
 
-        if (animator != null)
-        {
-            animator.SetTrigger("Hurt");
-        }
+    private IEnumerator PlayHurtThenWalk()
+    {
+        animator.Play("Hurt");
+
+        // Wait for the hurt animation to finish (adjust to match your actual clip length)
+        yield return new WaitForSeconds(0.3f); 
+
+        animator.Play("Walk");
     }
 }
