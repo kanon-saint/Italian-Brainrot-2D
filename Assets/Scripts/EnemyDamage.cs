@@ -5,6 +5,7 @@ public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] private float damage = 10f;
     [SerializeField] private float damageCooldown = 0.5f; // 0.5 seconds invincibility per enemy
+    [SerializeField] private Animator animator;
 
     // Store last damage time *per player* (if multiplayer) or just once for player here
     private float lastDamageTime = -Mathf.Infinity;
@@ -41,6 +42,11 @@ public class EnemyDamage : MonoBehaviour
                 }
 
                 lastDamageTime = Time.time;
+
+                if (animator != null)
+                {
+                    animator.SetTrigger("Attack");
+                }
             }
         }
     }

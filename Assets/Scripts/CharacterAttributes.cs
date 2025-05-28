@@ -9,7 +9,7 @@ public class CharacterAttributes : MonoBehaviour
     [Header("Score")]
     [SerializeField] private int scoreValue = 10;
     [SerializeField] private bool isBoss = false;
-
+    [SerializeField] private Animator animator;
 
     private int health;
     private bool isDead = false;
@@ -33,6 +33,12 @@ public class CharacterAttributes : MonoBehaviour
             // Add score
             ScoreManager.Instance?.AddScore(scoreValue);
 
+            // Play death animation
+            if (animator != null)
+            {
+                animator.SetTrigger("Die");
+            }
+
             if (isBoss)
             {
                 StageClearManager.Instance?.TriggerStageClear();
@@ -45,5 +51,10 @@ public class CharacterAttributes : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+
+        if (animator != null)
+        {
+            animator.SetTrigger("Hurt");
+        }
     }
 }
