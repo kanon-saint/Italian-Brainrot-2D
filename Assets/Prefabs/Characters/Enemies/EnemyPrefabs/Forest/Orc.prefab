@@ -189,7 +189,6 @@ MonoBehaviour:
   healthScalingFactor: 0
   scoreValue: 10
   isBoss: 0
-  hurtSFX: {fileID: 8300000, guid: d6a5c3d32c222b949b0d88a981167ed9, type: 3}
 --- !u!114 &-7894750430847464847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   damageCooldown: 1
-  animator: {fileID: 0}
+  animator: {fileID: 2789910074060659953}
 --- !u!114 &1885791966137374207
 MonoBehaviour:
   m_ObjectHideFlags: 0

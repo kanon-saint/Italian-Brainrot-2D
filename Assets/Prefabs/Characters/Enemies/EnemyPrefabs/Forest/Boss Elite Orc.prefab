@@ -327,7 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   damageCooldown: 1
-  animator: {fileID: 0}
+  animator: {fileID: 5463720059640030026}
 --- !u!114 &7719142754381760750
 MonoBehaviour:
   m_ObjectHideFlags: 0

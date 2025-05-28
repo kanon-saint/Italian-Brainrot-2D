@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections.Generic;
+using System.Collections;
 
 public class EnemyDamage : MonoBehaviour
 {
@@ -45,13 +45,6 @@ public class EnemyDamage : MonoBehaviour
 
                 Debug.Log($"Player damaged by {gameObject.name}. Current HP: {character.currentHP}");
 
-                // Trigger hurt animation on player
-                Animator playerAnimator = other.GetComponentInChildren<Animator>();
-                if (playerAnimator != null)
-                {
-                     playerAnimator.Play("Hurt");
-                }
-
                 if (character.currentHP <= 0)
                 {
                     GameOverManager.Instance.TriggerGameOver();
@@ -59,13 +52,18 @@ public class EnemyDamage : MonoBehaviour
 
                 lastDamageTime = Time.time;
 
-                // Optional: play enemy attack animation
-                if (animator != null)
-                {
-                    animator.SetTrigger("Attack");
-                }
+                StartCoroutine(PlayAttackAnimation());
             }
         }
     }
 
+    private IEnumerator PlayAttackAnimation()
+    {
+        if (animator != null)
+        {
+            animator.Play("Attack01");
+            yield return new WaitForSeconds(0.5f);
+            animator.Play("Walk");
+        }
+    }
 }

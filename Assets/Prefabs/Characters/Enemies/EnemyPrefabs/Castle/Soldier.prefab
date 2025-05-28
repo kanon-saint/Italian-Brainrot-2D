@@ -298,7 +298,6 @@ MonoBehaviour:
   healthScalingFactor: 0
   scoreValue: 5
   isBoss: 0
-  animator: {fileID: 0}
 --- !u!114 &1653769572086115968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   damageCooldown: 1
-  animator: {fileID: 0}
+  animator: {fileID: 6281655116277217310}
 --- !u!114 &-9096505058240451742
 MonoBehaviour:
   m_ObjectHideFlags: 0
