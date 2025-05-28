@@ -83710,6 +83710,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4919109023529605958, guid: fe8588a9f8b541a4da29731803add862, type: 3}
   m_PrefabInstance: {fileID: 1392573957}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1422317746
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7336855006976364932, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_Name
+      value: Boss Swordsman
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1ce511336178af479cba475c2047586, type: 3}
 --- !u!1001 &1423544036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84800,96 +84857,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7390098687413101703, guid: 9f96ec627e423b645b69fed7765b1353, type: 3}
   m_PrefabInstance: {fileID: 1788934228}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1826596224
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7336855006976364932, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_Name
-      value: Boss Swordsman
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178483001823581659, guid: e1ce511336178af479cba475c2047586, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7336855006976364932, guid: e1ce511336178af479cba475c2047586, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1826596226}
-  m_SourcePrefab: {fileID: 100100000, guid: e1ce511336178af479cba475c2047586, type: 3}
---- !u!1 &1826596225 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7336855006976364932, guid: e1ce511336178af479cba475c2047586, type: 3}
-  m_PrefabInstance: {fileID: 1826596224}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1826596226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826596225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e55b0512b0b1d44b8b34d1a92fca94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activationRange: 10
-  scriptToToggle: {fileID: 1826596227}
---- !u!114 &1826596227 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3726813681478857079, guid: e1ce511336178af479cba475c2047586, type: 3}
-  m_PrefabInstance: {fileID: 1826596224}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826596225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77fdc501858a63469f8dca15a425609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1841710734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87191,4 +87158,4 @@ SceneRoots:
   - {fileID: 1840529378779179944}
   - {fileID: 8718694335182497937}
   - {fileID: 6216304973742804323}
-  - {fileID: 1826596224}
+  - {fileID: 1422317746}
