@@ -5,8 +5,8 @@ using System.Collections;
 
 public class CreditsScroller : MonoBehaviour
 {
-    [SerializeField] private float scrollSpeed = 50f;
-    [SerializeField] private float returnDelay = 20f; // Time before returning to MainMenu
+    [SerializeField] private float scrollSpeed = 30f;
+    [SerializeField] private float returnDelay = 90f; // Time before returning to MainMenu
     [SerializeField] private string mainMenuSceneName = "MainMenu"; // Make sure this matches your scene name
 
     private RectTransform rectTransform;
@@ -25,6 +25,11 @@ public class CreditsScroller : MonoBehaviour
     private IEnumerator ReturnToMainMenuAfterDelay()
     {
         yield return new WaitForSeconds(returnDelay);
+        SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    public void ReturnToMainMenuButtonClick()
+    {
         SceneManager.LoadScene(mainMenuSceneName);
     }
 }
