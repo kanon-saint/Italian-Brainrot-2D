@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -1238770339354288258}
   - component: {fileID: -4378706131721370946}
   - component: {fileID: -7559593563041568191}
+  - component: {fileID: -6661076728034947449}
   m_Layer: 0
   m_Name: Boss Swordsman
   m_TagString: Enemy
@@ -184,11 +185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1516a3fae18984d409086f05b671a899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 100
+  baseHealth: 5000
   healthScalingFactor: 0
-  scoreValue: 100
+  scoreValue: 1000
   isBoss: 1
-  animator: {fileID: 1816970663263952725}
 --- !u!114 &3726813681478857079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +257,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingOffset: 0
+--- !u!114 &-6661076728034947449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336855006976364932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e55b0512b0b1d44b8b34d1a92fca94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationRange: 10
+  scriptToToggle: {fileID: 3726813681478857079}
 --- !u!1 &7608052834272396789
 GameObject:
   m_ObjectHideFlags: 0
