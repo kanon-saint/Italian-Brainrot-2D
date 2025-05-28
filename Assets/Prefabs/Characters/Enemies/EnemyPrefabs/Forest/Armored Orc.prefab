@@ -189,6 +189,8 @@ MonoBehaviour:
   healthScalingFactor: 0
   scoreValue: 25
   isBoss: 0
+  audioSource: {fileID: 5160245776569614475}
+  hurtSound: {fileID: 8300000, guid: 86cc1bce0e8fd4b4c8b66afcd7aa4f43, type: 3}
 --- !u!114 &-9181289975077474854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +268,7 @@ AudioSource:
   m_GameObject: {fileID: 7666466896826149928}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7807137196223791995, guid: cb41138df32ec474897a9ee6d2da29c8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1

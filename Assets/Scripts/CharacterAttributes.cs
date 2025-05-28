@@ -10,7 +10,11 @@ public class CharacterAttributes : MonoBehaviour
     [Header("Score")]
     [SerializeField] private int scoreValue = 10;
     [SerializeField] private bool isBoss = false;
+
+    [Header("References")]
     private Animator animator;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip hurtSound;
 
     private int health;
     private bool isDead = false;
@@ -18,6 +22,7 @@ public class CharacterAttributes : MonoBehaviour
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         // Scale health based on time since level started
         float elapsedTime = Time.time;
@@ -49,6 +54,8 @@ public class CharacterAttributes : MonoBehaviour
     {
         health -= damage;
         StartCoroutine(PlayHurtThenWalk());
+
+        StartCoroutine(PlayHurtSfx());
     }
 
     private IEnumerator PlayHurtThenWalk()
@@ -56,8 +63,14 @@ public class CharacterAttributes : MonoBehaviour
         animator.Play("Hurt");
 
         // Wait for the hurt animation to finish (adjust to match your actual clip length)
-        yield return new WaitForSeconds(0.3f); 
+        yield return new WaitForSeconds(0.3f);
 
         animator.Play("Walk");
+    }
+
+    private IEnumerator PlayHurtSfx()
+    {
+        audioSource.PlayOneShot(hurtSound);
+        yield return new WaitForSeconds(0.3f);
     }
 }
