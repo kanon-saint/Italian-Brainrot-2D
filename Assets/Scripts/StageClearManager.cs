@@ -30,6 +30,12 @@ public class StageClearManager : MonoBehaviour
             Time.timeScale = 0f;
         }
 
+        // Reset weapon levels
+        if (WeaponManager.Instance != null)
+        {
+            WeaponManager.Instance.ResetAllWeaponLevels();
+        }
+
         StartCoroutine(ProceedToNextSceneAfterDelay());
     }
 
