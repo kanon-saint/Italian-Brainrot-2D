@@ -6,6 +6,20 @@ public class CharacterSpawner : MonoBehaviour
 
     public CharacterHUD hud;
 
+    private void Awake()
+    {
+        // Reference the WeaponManager function
+        if (WeaponManager.Instance != null)
+        {
+            WeaponManager.Instance.ResetAllWeaponLevels();
+            WeaponManager.Instance.DisplayEquippedWeapons();
+        }
+        else
+        {
+            Debug.LogWarning("WeaponManager instance not found. Cannot reset weapon levels.");
+        }
+    }
+
     private void Start()
     {
         if (GameManager.Instance != null && GameManager.Instance.selectedCharacter != null)
@@ -24,16 +38,6 @@ public class CharacterSpawner : MonoBehaviour
             else
             {
                 Debug.LogWarning("CharacterHUD reference not set on CharacterSpawner.");
-            }
-
-            // Reference the WeaponManager function
-            if (WeaponManager.Instance != null)
-            {
-                WeaponManager.Instance.ResetAllWeaponLevels();
-            }
-            else
-            {
-                Debug.LogWarning("WeaponManager instance not found. Cannot reset weapon levels.");
             }
         }
         else

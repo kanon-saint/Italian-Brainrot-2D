@@ -42,11 +42,13 @@ public class WeaponManager : MonoBehaviour
             return;
         }
         Instance = this;
+        
     }
 
 
     private void Start()
     {
+        DisplayEquippedWeapons();
         if (powerUpPanel != null)
             powerUpPanel.SetActive(false);
         else
@@ -230,45 +232,45 @@ public class WeaponManager : MonoBehaviour
         Debug.Log("Weapon levels have been reset based on player character.");
     }
 
- public void DisplayEquippedWeapons()
-{
-    foreach (Transform child in equippedWeaponsPanel)
+    public void DisplayEquippedWeapons()
     {
-        Destroy(child.gameObject);
+        foreach (Transform child in equippedWeaponsPanel)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (var weapon in allWeapons)
+        {
+            if (weapon == null || weapon.level < 1)
+                continue;
+
+            string wName = weapon.weaponName.ToLower();
+            CharacterData selectedData = GameManager.Instance.selectedCharacter;
+            string playerName = selectedData.characterName.ToLower();
+
+            bool isClub = wName == "club";
+            bool isBite = wName == "bite";
+            bool isThorn = wName == "thorn";
+
+            bool isValidClub = isClub && playerName.Contains("tung tung tung sahur");
+            bool isValidBite = isBite && playerName.Contains("tralalero tralala");
+            bool isValidThorn = isThorn && playerName.Contains("br br patapim");
+
+            if ((isClub && !isValidClub) || (isBite && !isValidBite) || (isThorn && !isValidThorn))
+                continue;
+
+            GameObject item = Instantiate(equippedWeaponItemPrefab, equippedWeaponsPanel);
+
+            Image iconImage = item.GetComponent<Image>();
+            if (iconImage == null)
+                iconImage = item.transform.Find("Icon")?.GetComponent<Image>();
+
+            TextMeshProUGUI levelText = item.GetComponentInChildren<TextMeshProUGUI>();
+
+            if (iconImage != null) iconImage.sprite = weapon.icon;
+            if (levelText != null) levelText.text = $"Lv. {weapon.level}";
+        }
     }
-
-    foreach (var weapon in allWeapons)
-    {
-        if (weapon == null || weapon.level < 1)
-            continue;
-
-        string wName = weapon.weaponName.ToLower();
-        CharacterData selectedData = GameManager.Instance.selectedCharacter;
-        string playerName = selectedData.characterName.ToLower();
-
-        bool isClub = wName == "club";
-        bool isBite = wName == "bite";
-        bool isThorn = wName == "thorn";
-
-        bool isValidClub = isClub && playerName.Contains("tung tung tung sahur");
-        bool isValidBite = isBite && playerName.Contains("tralalero tralala");
-        bool isValidThorn = isThorn && playerName.Contains("br br patapim");
-
-        if ((isClub && !isValidClub) || (isBite && !isValidBite) || (isThorn && !isValidThorn))
-            continue;
-
-        GameObject item = Instantiate(equippedWeaponItemPrefab, equippedWeaponsPanel);
-
-        Image iconImage = item.GetComponent<Image>();
-        if (iconImage == null)
-            iconImage = item.transform.Find("Icon")?.GetComponent<Image>();
-
-        TextMeshProUGUI levelText = item.GetComponentInChildren<TextMeshProUGUI>();
-
-        if (iconImage != null) iconImage.sprite = weapon.icon;
-        if (levelText != null) levelText.text = $"Lv. {weapon.level}";
-    }
-}
 
 
 }
