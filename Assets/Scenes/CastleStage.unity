@@ -86401,6 +86401,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1177859111}
     - target: {fileID: 6813381835045033580, guid: 4fba573bd8f10a04d94e07aa6f13c6af, type: 3}
+      propertyPath: allWeapons.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813381835045033580, guid: 4fba573bd8f10a04d94e07aa6f13c6af, type: 3}
+      propertyPath: 'allWeapons.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8de147a7b42309b4880f6314ea2dc13f, type: 2}
+    - target: {fileID: 6813381835045033580, guid: 4fba573bd8f10a04d94e07aa6f13c6af, type: 3}
+      propertyPath: 'allWeapons.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: cc9f8a17d23612d46a430b377530d644, type: 2}
+    - target: {fileID: 6813381835045033580, guid: 4fba573bd8f10a04d94e07aa6f13c6af, type: 3}
+      propertyPath: 'allWeapons.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f74aa87efa471344aadd7e492ba9090, type: 2}
+    - target: {fileID: 6813381835045033580, guid: 4fba573bd8f10a04d94e07aa6f13c6af, type: 3}
       propertyPath: equippedWeaponItemPrefab
       value: 
       objectReference: {fileID: 7697759904238472308, guid: 829aead5d3557174c819f2620efd82d3, type: 3}
