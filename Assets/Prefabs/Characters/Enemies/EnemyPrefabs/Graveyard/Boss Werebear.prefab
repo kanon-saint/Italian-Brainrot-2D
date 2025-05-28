@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 25
   damageCooldown: 1
+  animator: {fileID: 0}
 --- !u!114 &217157309205632814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,9 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1516a3fae18984d409086f05b671a899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 100
+  baseHealth: 3000
   healthScalingFactor: 0
-  scoreValue: 100
+  scoreValue: 1000
   isBoss: 1
 --- !u!50 &2529406328762453837
 Rigidbody2D:
