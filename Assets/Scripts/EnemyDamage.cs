@@ -62,7 +62,7 @@ public class EnemyDamage : MonoBehaviour
         if (animator != null)
         {
             animator.Play((Random.value < 0.5f) ? "Attack01" : "Attack02");
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             animator.Play("Walk");
         }
     }

@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 10
   healthScalingFactor: 0
-  scoreValue: 10
+  scoreValue: 5
   isBoss: 0
 --- !u!114 &4549361614937538098
 MonoBehaviour:
