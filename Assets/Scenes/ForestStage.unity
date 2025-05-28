@@ -3717,11 +3717,11 @@ PrefabInstance:
     - target: {fileID: 1633550676308229221, guid: fe27822dad265b744b6215e0f5873eb8, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 6ac81ca19cc27904ba8b5ec624a4c065, type: 3}
+      objectReference: {fileID: 8300000, guid: 5e965ea65dd180740a2b1def1d1e75af, type: 3}
     - target: {fileID: 1633550676308229221, guid: fe27822dad265b744b6215e0f5873eb8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 6ac81ca19cc27904ba8b5ec624a4c065, type: 3}
+      objectReference: {fileID: 8300000, guid: 5e965ea65dd180740a2b1def1d1e75af, type: 3}
     - target: {fileID: 4216114267093981385, guid: fe27822dad265b744b6215e0f5873eb8, type: 3}
       propertyPath: sfxOnBtn
       value: 
