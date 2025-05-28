@@ -6157,9 +6157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 264470205}
   finalScoreText: {fileID: 1462511000}
-  audioSource: {fileID: 0}
-  gameOverSound: {fileID: 0}
-  buttonClickSound: {fileID: 0}
+  audioSource: {fileID: 1661429820}
+  gameOverSound: {fileID: 8300000, guid: 74b3ea4521ab1b54fa0b2453cd322a3d, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: a6383d4703ee20c4b9f5eba1a09a2194, type: 3}
 --- !u!4 &643753859
 Transform:
   m_ObjectHideFlags: 0
@@ -44335,6 +44335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fe4a55d39cb104084011db5930028a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1661429820 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7412016873778783206, guid: f0aa73de529b00b4285d366c529a1d05, type: 3}
+  m_PrefabInstance: {fileID: 1661429818}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1662000095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4939002593423848251, guid: 848e4d68e7e214945a8e640d4697e6d3, type: 3}

@@ -86547,13 +86547,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4375626697074420117, guid: a25e6a93b1bc01546938060ba0826a2a, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 8718694335182497938}
+    - target: {fileID: 4375626697074420117, guid: a25e6a93b1bc01546938060ba0826a2a, type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 6863853898005242538}
     - target: {fileID: 4375626697074420117, guid: a25e6a93b1bc01546938060ba0826a2a, type: 3}
+      propertyPath: gameOverSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 74b3ea4521ab1b54fa0b2453cd322a3d, type: 3}
+    - target: {fileID: 4375626697074420117, guid: a25e6a93b1bc01546938060ba0826a2a, type: 3}
       propertyPath: finalScoreText
       value: 
       objectReference: {fileID: 9023134271152250848}
+    - target: {fileID: 4375626697074420117, guid: a25e6a93b1bc01546938060ba0826a2a, type: 3}
+      propertyPath: buttonClickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a6383d4703ee20c4b9f5eba1a09a2194, type: 3}
     - target: {fileID: 7278531450651522665, guid: a25e6a93b1bc01546938060ba0826a2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 71.25538
@@ -87248,6 +87260,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c395695baab554982c891138c63ff2, type: 3}
+--- !u!82 &8718694335182497938 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7640265653132542144, guid: 74c395695baab554982c891138c63ff2, type: 3}
+  m_PrefabInstance: {fileID: 8718694335182497937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &9023134271152250848 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1866242002239337104, guid: 3b6a246c9722b4747965e228ee232e66, type: 3}
