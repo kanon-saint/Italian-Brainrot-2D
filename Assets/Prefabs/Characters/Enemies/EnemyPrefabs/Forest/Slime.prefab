@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 10
   healthScalingFactor: 0
-  scoreValue: 10
+  scoreValue: 5
   isBoss: 0
   audioSource: {fileID: -1837727170996203324}
   hurtSound: {fileID: 8300000, guid: 86cc1bce0e8fd4b4c8b66afcd7aa4f43, type: 3}
