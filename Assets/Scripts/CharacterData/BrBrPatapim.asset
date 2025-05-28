@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BrBrPatapim
   m_EditorClassIdentifier: 
   characterName: Br Br Patapim
-  attackName: Root Stomp
+  attackName: Thorn Throw
   attackDescription: A melee attack, stomping enemies by its roots legs
   characterDescription: He's a hybrid tree.
   maxHP: 120

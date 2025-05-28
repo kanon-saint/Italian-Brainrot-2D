@@ -2583,6 +2583,7 @@ Transform:
   - {fileID: 172079768}
   - {fileID: 684964760}
   - {fileID: 354359251}
+  - {fileID: 2044587485}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
@@ -3076,9 +3077,7 @@ MonoBehaviour:
   spawnIntervalRange: {x: 2, y: 4}
   spawnAccelerationRate: 0.2
   accelerationInterval: 60
-  timedSpawns:
-  - triggerTime: 60
-    enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
+  timedSpawns: []
   spawnRanges:
   - startTime: 0
     endTime: 15
@@ -3589,6 +3588,164 @@ MonoBehaviour:
   spawnAccelerationRate: 0.2
   accelerationInterval: 60
   timedSpawns: []
+  spawnRanges:
+  - startTime: 0
+    endTime: 15
+    enemyPrefabs:
+    - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
+  - startTime: 15
+    endTime: 30
+    enemyPrefabs:
+    - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - startTime: 30
+    endTime: 45
+    enemyPrefabs:
+    - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - startTime: 45
+    endTime: 60
+    enemyPrefabs:
+    - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+    - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - startTime: 60
+    endTime: 3600
+    enemyPrefabs:
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+    - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+--- !u!1 &2044587484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044587485}
+  - component: {fileID: 2044587486}
+  m_Layer: 0
+  m_Name: BossSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2044587485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044587484}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: -6, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2044587486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044587484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemies: 6
+  defaultEnemies: []
+  spawnPoint: {fileID: 2044587485}
+  spawnIntervalRange: {x: 2, y: 4}
+  spawnAccelerationRate: 0.2
+  accelerationInterval: 60
+  timedSpawns:
+  - triggerTime: 60
+    enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
+  spawnRanges:
+  - startTime: 0
+    endTime: 15
+    enemyPrefabs:
+    - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
+  - startTime: 15
+    endTime: 30
+    enemyPrefabs:
+    - {fileID: 6303794760697984152, guid: f0c0beffaefe2bc49a808bf6a9ba3346, type: 3}
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - startTime: 30
+    endTime: 45
+    enemyPrefabs:
+    - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - startTime: 45
+    endTime: 60
+    enemyPrefabs:
+    - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+    - {fileID: 1480585402616220901, guid: 5c83d915c4d1f734aacf88a92a81dbca, type: 3}
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+  - startTime: 60
+    endTime: 3600
+    enemyPrefabs:
+    - {fileID: 6111559782897621481, guid: ef6d6472ae6574440b6f617fab7f87d6, type: 3}
+    - {fileID: 7666466896826149928, guid: 4302ce3ae9527cc45aec9d858ef8b66a, type: 3}
+--- !u!1 &2044587484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044587485}
+  - component: {fileID: 2044587486}
+  m_Layer: 0
+  m_Name: BossSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2044587485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044587484}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: -6, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2044587486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044587484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f2a728480b94541bc1110fdf0bd1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemies: 6
+  defaultEnemies: []
+  spawnPoint: {fileID: 2044587485}
+  spawnIntervalRange: {x: 2, y: 4}
+  spawnAccelerationRate: 0.2
+  accelerationInterval: 60
+  timedSpawns:
+  - triggerTime: 60
+    enemyPrefab: {fileID: 5292262246216017551, guid: 545f85fecbd11dd4c85fa9def7b17d40, type: 3}
   spawnRanges:
   - startTime: 0
     endTime: 15
@@ -4941,11 +5098,11 @@ PrefabInstance:
     - target: {fileID: 1633550676308229221, guid: fe27822dad265b744b6215e0f5873eb8, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 6ac81ca19cc27904ba8b5ec624a4c065, type: 3}
+      objectReference: {fileID: 8300000, guid: 5e965ea65dd180740a2b1def1d1e75af, type: 3}
     - target: {fileID: 1633550676308229221, guid: fe27822dad265b744b6215e0f5873eb8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 6ac81ca19cc27904ba8b5ec624a4c065, type: 3}
+      objectReference: {fileID: 8300000, guid: 5e965ea65dd180740a2b1def1d1e75af, type: 3}
     - target: {fileID: 4216114267093981385, guid: fe27822dad265b744b6215e0f5873eb8, type: 3}
       propertyPath: sfxOnBtn
       value: 

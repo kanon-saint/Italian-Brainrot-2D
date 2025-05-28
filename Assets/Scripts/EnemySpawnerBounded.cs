@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class EnemySpawnerBounded : MonoBehaviour
 {
+    [SerializeField] private int maxEnemies = 5;
     [Header("General Spawn Settings")]
     [SerializeField] private GameObject[] defaultEnemies;
     [SerializeField] private Transform spawnPoint;
@@ -22,7 +23,7 @@ public class EnemySpawnerBounded : MonoBehaviour
     [SerializeField] private Tilemap groundTilemap;
 
     private float elapsedTime = 0f;
-
+    private List<GameObject> activeEnemies = new List<GameObject>();
     private void Start()
     {
         StartCoroutine(SpawnEnemies());
@@ -33,6 +34,8 @@ public class EnemySpawnerBounded : MonoBehaviour
     private void Update()
     {
         elapsedTime += Time.deltaTime;
+        // Clean up null entries
+        activeEnemies.RemoveAll(enemy => enemy == null);
     }
 
     private IEnumerator SpawnEnemies()
@@ -41,6 +44,9 @@ public class EnemySpawnerBounded : MonoBehaviour
         {
             float waitTime = Random.Range(spawnIntervalRange.x, spawnIntervalRange.y);
             yield return new WaitForSeconds(waitTime);
+
+            if (activeEnemies.Count >= maxEnemies)
+                continue;
 
             GameObject enemyToSpawn = ChooseEnemyForCurrentTime();
 
@@ -51,7 +57,8 @@ public class EnemySpawnerBounded : MonoBehaviour
 
                 if (IsValidSpawnPosition(spawnPosition))
                 {
-                    Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+                    GameObject spawned = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+                    activeEnemies.Add(spawned);
                 }
             }
         }
@@ -97,14 +104,17 @@ public class EnemySpawnerBounded : MonoBehaviour
             float wait = Mathf.Max(0, timed.triggerTime - elapsedTime);
             yield return new WaitForSeconds(wait);
 
-            if (timed.enemyPrefab != null)
+            activeEnemies.RemoveAll(enemy => enemy == null);
+
+            if (activeEnemies.Count < maxEnemies && timed.enemyPrefab != null)
             {
                 Vector3 spawnPosition = spawnPoint ? spawnPoint.position : transform.position;
                 spawnPosition.z = -1f;
 
                 if (IsValidSpawnPosition(spawnPosition))
                 {
-                    Instantiate(timed.enemyPrefab, spawnPosition, Quaternion.identity);
+                    GameObject spawned = Instantiate(timed.enemyPrefab, spawnPosition, Quaternion.identity);
+                    activeEnemies.Add(spawned);
                 }
             }
         }
