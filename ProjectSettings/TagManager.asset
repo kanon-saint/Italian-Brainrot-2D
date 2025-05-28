@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - ExpOrb
   - ScoreText
+  - EquippedWeaponsPanel
+  - EquippedWeaponItemPrefab
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,8 @@ public class CharacterAttributes : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>(); // Cache Animator
+
         // Scale health based on time since level started
         float elapsedTime = Time.time;
         health = Mathf.RoundToInt(baseHealth + (elapsedTime * healthScalingFactor));
